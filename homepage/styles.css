@@ -1,7 +1,26 @@
+/* Header */
 .navbar {
-  background-color: coral;
+  background-color: hsl(14, 100%, 63%);
+  padding-top: 0 !important;
+  color: '#ffffff';
+  
+}
+.navbar-brand {
+  padding-top: 0
 }
 
+.navbar-brand img{
+  height: 100%
+}
+.site-name {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.8em;
+}
+
+.search-icon {
+  font-size: 1.52em !important;
+}
 .footer {
-  background-color: coral;
+  background-color: #ff7043;
 }
