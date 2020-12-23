@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Karla";
-  src: url('../fonts/Karla-Medium.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 
 body {
   color: #333333 !important;
-  font-family: 'Karla' !important;
+  font-family: 'Roboto' !important;
 }
 
 img {
@@ -218,7 +218,7 @@ img {
 
 .footer-list li {
   margin: 15px 1.5px;
-  font-size: 1.1em;
+  font-size: 1.05em;
 }
 
 .footer-list li a{
@@ -228,6 +228,7 @@ img {
 .footer-list li a:hover{
   color: #ffffff;
   list-style-type: none;
+  text-decoration: none;
 }
 
 .copyright h6{
@@ -243,9 +244,100 @@ img {
   background-color: #ffffff;
   border-radius: 100%;
   font-size: 1.7em;
+  vertical-align: bottom;
 }
 
 .fa-rss-square {
   color: #7c410a;
   font-size: 1.7em;
+  vertical-align: bottom;
+}
+
+/* Register Project Page */
+#registerProSection {
+
+}
+
+#registerProSection .registerPro-left-wrapper,
+#registerProSection .registerPro-right-wrapper {
+  border: 1.5px solid #333333;
+  border-radius: 2px;
+  height: 100%;
+}
+
+#registerProSection .registerPro-title {
+  color: #7c410a;
+  text-align: center;
+}
+
+#registerProSection .registerPro-left-title {
+
+}
+
+#registerProSection .registerPro-left .custom-file-label::after {
+  width: 100px;
+  left: 0;
+  right: auto;
+  border-left-width: 0;
+  border-right: inherit;
+  content: "Chọn tệp";
+}
+
+#registerProSection .registerPro-left-title hr{
+  border-top: 1.5px solid #888888;
+}
+
+#firstChoiceBtn,
+#secondChoiceBtn {
+  width: 100px;
+  background-color: #e9ecef;
+}
+
+#registerProSection .registerPro-right-title i {
+  color: #ff7e34;
+}
+
+#registerProSection .registerPro-right-body li {
+  padding: 20px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #000000;
+}
+
+#registerProSection .registerPro-right-body li a {
+  color: #333333;
+}
+
+#registerProSection .registerPro-right-more a{
+  color: #7c410a;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* Modal */
+.modal-dialog.modal-xl {
+  max-width: 60% !important;
+  width: 60%;
+}
+
+.modal-title {
+  color: #7c410a;
+  margin: 0 auto;
+}
+
+.modalOkBtn {
+  margin-left: auto;
+}
+
+#choiceModal .modal-body {
+  background-color: #dddddd;
+  border-radius: 3px;
+}
+
+#choiceModal .choiceWrapper .col-md-6 {
+  border: 1px solid #aaaaaa;
+}
+
+#choiceModal .custom-control-label::before {
+  background-color: #aaaaaa;
 }
