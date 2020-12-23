@@ -341,3 +341,11 @@ img {
 #choiceModal .custom-control-label::before {
   background-color: #aaaaaa;
 }
+
+/* Cancel Registered Project Page */
+#registerProSection .registerPro-left-body table tr th:first-child,
+#registerProSection .registerPro-left-body table tr th:last-child, 
+#registerProSection .registerPro-left-body table tr td:first-child,
+#registerProSection .registerPro-left-body table tr td:last-child  {
+  text-align: center;
+}
