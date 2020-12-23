@@ -39,7 +39,7 @@ img {
   /*position: fixed !important;*/
   top: 0; 
   width: 100%;
-  z-index: 1000;
+  /*z-index: 999;*/
   border-radius: 3px;
 }
 .navbar-brand {
@@ -348,4 +348,9 @@ img {
 #registerProSection .registerPro-left-body table tr td:first-child,
 #registerProSection .registerPro-left-body table tr td:last-child  {
   text-align: center;
+}
+
+/* Dropdown */
+.dropdown-menu .dropdown-title {
+  color: #7c410a;
 }
