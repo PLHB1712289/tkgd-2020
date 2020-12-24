@@ -195,43 +195,47 @@
     </nav>
     <!-- /Header -->
     <!-- Body -->
-    <div id="registerProSection" class="container my-5">
+    <div id="searchResultSection" class="container my-5">
       <div class="row">
         <div class="col-md-8 registerPro-left">
-          <div class="registerPro-left-wrapper py-3 px-3">
-            <div class="registerPro-title registerPro-left-title px-5">
-              <h2>ĐĂNG KÝ<br/>ĐỀ TÀI TỐT NGHIỆP</h2>
+          <div class="registerPro-left-wrapper py-3 px-2">
+            <h5 class="searchResult px-5 py-2">Không tìm thấy thông tin liên quan tới từ khóa <span class="searchResult-keyword">"asd"</span></h5>
+            <!-- Updated Info -->
+            <div class="registerPro-title registerPro-left-title px-5 pt-4 pb-1 text-left">
+              <h3>TIN TỨC MỚI CẬP NHẬT</h3>
               <hr/>
             </div>
-            <div class="registerPro-left-body">
-              <div class="registerPro-date my-3">
-                Ngày Đăng ký: 10/12/2020
-              </div>
-              <table class="table table-bordered">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col" width="20%">Nguyện vọng</th>
-                    <th scope="col" width="60%">Tên đề tài</th>
-                    <th scope="col" width="20%">Loại đề tài</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Website quản lý phòng khám thú y</td>
-                    <td>ĐATN</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Mạng xã hội ẩm thực</td>
-                    <td>ĐATN</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="text-center my-4">
-                <button id="registerProBtn" type="submit" class="btn btn-danger btn-lg px-5" data-toggle="modal" data-target="#confirmCancelModal">Hủy đăng ký</button>
-              </div>
+            <div class="registerPro-left-body px-5">
+              <ul class="px-0" style="list-style-type: none;">
+                <!-- Article -->
+                <li>
+                  <div class="row">
+                    <div class="col-md-2 article-date my-2">
+                      <u>3/12/2020</u>
+                    </div>
+                    <div class="col-md-10 article-content py-2">
+                      <p><a href="#">Nộp hồ sơ bảo vệ cho học viên cao học bảo vệ đợt cuối tháng 12/2020.</a></p>
+                    </div>
+                  </div>
+                </li>
+                <!-- /Article -->
+                <!-- Article -->
+                <li>
+                  <div class="row">
+                    <div class="col-md-2 article-date my-2">
+                      <u>3/12/2020</u>
+                    </div>
+                    <div class="col-md-10 article-content py-2">
+                      <p><a href="#">Thông báo nộp đơn đăng ký thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2018 Đợt 2 (Online).</a></p>
+                    </div>
+                  </div>
+                </li>
+                <!-- /Article -->
+              </ul>
+              <h6 class="more text-center"><a href="#">Xem thêm</a></h6>
+              
             </div>
+            <!-- /Updated Info -->
           </div>
         </div>
         <div class="col-md-4 registerPro-right">
@@ -264,18 +268,87 @@
     </div>
     <!-- /Body -->
 
-    
+    <!-- Choice Modal -->
+    <div class="modal fade" id="choiceModal" tabindex="-1" role="dialog" aria-labelledby="choiceModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title" id="choiceModalTitle">CHỌN ĐỀ TÀI TỐT NGHIỆP</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-0 m-4">
+            <div class="container-fluid">
+              <div class="row choiceWrapper">
+                <div class="col-md-6 p-3">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="radio1" name="choice" class="custom-control-input">
+                    <label class="custom-control-label" for="radio1">Ứng dụng đọc truyện - ĐATN</label>
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="radio2" name="choice" class="custom-control-input">
+                    <label class="custom-control-label" for="radio2">Website quản lý phòng khám thú y - ĐATN</label>
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="radio3" name="choice" class="custom-control-input">
+                    <label class="custom-control-label" for="radio3">Phân tích xu hướng mạng xã hội - KLTN</label>
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="radio4" name="choice" class="custom-control-input">
+                    <label class="custom-control-label" for="radio4">Lotus Fitness - TTTN</label>
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="radio5" name="choice" class="custom-control-input">
+                    <label class="custom-control-label" for="radio5">Website đặt vé xe - ĐATN</label>
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="radio6" name="choice" class="custom-control-input">
+                    <label class="custom-control-label" for="radio6">Ứng dụng học ngoại ngữ bằng FlashCard - ĐATN</label>
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="radio7" name="choice" class="custom-control-input">
+                    <label class="custom-control-label" for="radio7">E-Study - ĐATN</label>
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="radio8" name="choice" class="custom-control-input">
+                    <label class="custom-control-label" for="radio8">Website thiết kế nội thất - ĐATN</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="modalOkBtn btn btn-primary btn-lg">Xác nhận</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Choice Modal -->
 
-    <!-- Confirm cancel Modal -->
-    <div class="modal fade" id="confirmCancelModal" tabindex="-1" role="dialog" aria-labelledby="choiceModalTitle" aria-hidden="true">
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="choiceModalTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-body p-0 mt-4 mb-2 text-center">
-            <h6 class="font-weight-bold">Bạn có chắc muốn hủy đề tài đã đăng ký ?</h6>
+            <h6 class="font-weight-bold">Vui lòng điền đầy đủ thông tin để đăng ký đề tài tốt nghiệp</h6>
           </div>
           <div class="modal-footer text-center">
-            <button type="button" class="modalOkBtn btn btn-danger px-5 ml-auto">Hủy</button>
-            <button type="button" class="modalOkBtn btn btn-light px-5 mr-auto" data-dismiss="modal" aria-label="Close">Giữ</button>
+            <button type="button" class="modalOkBtn btn btn-primary ml-auto mr-auto" data-dismiss="modal" aria-label="Close">Xác nhận</button>
           </div>
         </div>
       </div>
@@ -347,6 +420,6 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=458971915077734&autoLogAppEvents=1" nonce="CRE51soy"></script>
     
     <!-- Optional JavaScript -->
-    <script src="../javascript/cancelRegisterProject.js"></script>
+    <script src="../javascript/registerproject.js"></script>
   </body>
 </html>

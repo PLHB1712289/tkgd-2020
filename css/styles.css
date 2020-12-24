@@ -194,15 +194,18 @@ img {
   font-size: 1.2em;
 }
 
-#more {
+.more {
   color: #970909;
 }
 
-#more a {
+.more a {
   color: #970909 !important;
+  text-decoration: underline;
+  font-weight: 600;
+  font-style: italic;
 }
 
-#more a:hover {
+.more a:hover {
   color: #970909 !important;
 }
 
@@ -268,10 +271,6 @@ img {
 #registerProSection .registerPro-title {
   color: #7c410a;
   text-align: center;
-}
-
-#registerProSection .registerPro-left-title {
-
 }
 
 #registerProSection .registerPro-left .custom-file-label::after {
@@ -353,4 +352,67 @@ img {
 /* Dropdown */
 .dropdown-menu .dropdown-title {
   color: #7c410a;
+}
+
+/* Search Page */
+#searchResultSection {
+
+}
+
+#searchResultSection .registerPro-left-wrapper,
+#searchResultSection .registerPro-right-wrapper {
+  border: 1.5px solid #333333;
+  border-radius: 2px;
+  height: 100%;
+}
+
+#searchResultSection .registerPro-title {
+  color: #7c410a;
+  text-align: center;
+}
+
+#searchResultSection .registerPro-left-title hr{
+  border-top: 1.5px solid #888888;
+}
+
+#searchResultSection .registerPro-right-title i {
+  color: #ff7e34;
+}
+
+#searchResultSection .registerPro-right-body li {
+  padding: 20px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #000000;
+}
+
+#searchResultSection .registerPro-right-body li a {
+  color: #333333;
+}
+
+#searchResultSection .registerPro-right-more a{
+  color: #7c410a;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+#searchResultSection .searchResult span {
+  color: #7c410a;
+  font-weight: 600;
+}
+
+#searchResultSection .article-title a{
+  font-weight: 600;
+  color: #333333;
+}
+
+#searchResultSection .article-date{
+  margin: 20px auto;
+  text-align: center;
+  font-weight: 600;
+}
+
+#searchResultSection .article-content a{
+  font-weight: 600;
+  color: #333333;
 }

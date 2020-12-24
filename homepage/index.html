@@ -86,7 +86,7 @@
     <!-- /Menu -->
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./index.html">
         <img src="../images/fit.PNG" width="50" alt="">
         <div class="site-name px-3">
           <span>KHOA CÔNG NGHỆ THÔNG TIN</span> <br/>
@@ -185,9 +185,9 @@
             </div>
           </li>
           <li class="nav-item active px-4">
-            <form class="form-inline">
+            <form class="form-inline" id="searchForm" action="../searchPage/index.html">
               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-              <a class="nav-link" href="#"><i class="fas fa-search search-icon text-white"></i></a>
+              <a class="nav-link" href="#" onclick="document.getElementById('searchForm').submit();"><i class="fas fa-search search-icon text-white"></i></a>
             </form>
           </li>
         </ul>
@@ -682,7 +682,7 @@
       </div>
     </div>
     <!-- Teacher News-->
-    <div id="more" class="mt-0 mb-3 text-center">
+    <div id="" class="mt-0 mb-3 text-center more">
       <a href="#"><h3><i><u>Xem tất cả các tin</u></i></h3></a>
     </div>
     <!-- /Body -->
