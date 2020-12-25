@@ -299,6 +299,7 @@ img {
   border: 1.5px solid rgba(51, 51, 51, 1);
   border-radius: 5px;
   height: 100%;
+  background-color: #f9f9f9;
 }
 
 #registerProSection .registerPro-title {
@@ -341,6 +342,13 @@ img {
 
 #registerProSection .registerPro-right-more a {
   color: #7c410a;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+#registerProSection .registerPro-right-more a:hover {
+  color: #e77000 !important;
   font-weight: 600;
   text-decoration: underline;
   font-style: italic;
@@ -396,6 +404,7 @@ img {
   border: 1.5px solid #333333;
   border-radius: 2px;
   height: 100%;
+  background-color: #f9f9f9;
 }
 
 #searchResultSection .registerPro-title {
@@ -428,6 +437,13 @@ img {
   font-style: italic;
 }
 
+#searchResultSection .registerPro-right-more a:hover {
+  color: #e77000 !important;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+}
+
 #searchResultSection .searchResult span {
   color: #7c410a;
   font-weight: 600;
@@ -447,6 +463,25 @@ img {
 #searchResultSection .article-content a {
   font-weight: 600;
   color: #333333;
+}
+
+/* Detail Notification Page*/
+.detail-notification .detail-notification-date {
+  color: #333333;
+  font-weight: 500;
+}
+
+.detail-notification-divider {
+  border-top: 1.5px solid #888888;
+}
+
+.detail-notification-related-news li {
+  padding: 5px 0;
+}
+
+.detail-notification-related-news li a {
+  color: #333333;
+  font-weight: bold;
 }
 
 /* <baobao> */
