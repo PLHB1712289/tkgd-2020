@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
 
-    <title>FIT HCMUS</title>
+    <title id="title-search">Tìm kiếm "Đăng ký"</title>
   </head>
   <body>
     <!-- Menu -->
@@ -87,7 +87,7 @@
     <!-- Header -->
     <div style="background-color: #ff7043;">
       <nav class="navbar navbar-expand-lg navbar-dark container">
-        <a class="navbar-brand" href="./index.html">
+        <a class="navbar-brand" href="../homepage/index.html">
           <img src="../images/fit.PNG" width="50" alt="">
           <div class="site-name px-3">
             <span>KHOA CÔNG NGHỆ THÔNG TIN</span> <br/>
@@ -186,8 +186,8 @@
               </div>
             </li>
             <li class="nav-item active px-4">
-              <form class="form-inline" id="searchForm" action="../searchPage/index.html">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <form class="form-inline" id="searchForm">
+                <input id="key-search" class="form-control" type="search" placeholder="Tìm kiếm" aria-label="Search" value="Đăng ký">
                 <a class="nav-link" href="#" onclick="document.getElementById('searchForm').submit();"><i class="fas fa-search search-icon text-white"></i></a>
               </form>
             </li>
@@ -202,7 +202,7 @@
       <div class="row">
         <div class="col-md-8 registerPro-left">
           <div class="registerPro-left-wrapper py-3 px-2">
-            <h5 class="searchResult px-5 py-2">Tìm thấy <span class="searchResult-number" style="color: red;">3 kết quả</span> liên quan tới từ khóa <span class="searchResult-number" style="color: red;">"Đăng ký"</span></h5>
+            <h5 class="searchResult px-5 py-2">Tìm thấy <span class="searchResult-number" style="color: red;">3 kết quả</span> liên quan tới từ khóa <span id="key-search-result" class="searchResult-keyword" style="color: red;">"Đăng ký"</span></h5>
             <!-- Department Info -->
             <div class="registerPro-title registerPro-left-title px-5 pt-4 pb-1 text-left">
               <h3>THÔNG TIN KHOA</h3>
@@ -345,6 +345,8 @@
     <!-- /Footer -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../javascript/search.js"></script>
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
