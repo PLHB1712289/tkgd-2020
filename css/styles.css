@@ -211,7 +211,19 @@ img {
   font-size: 1.2em;
 }
 
-#teacherNews .title i {
+#teacherNews .title i,
+#postgraduateNews .title i,
+#conferenceNews .title i {
+  font-size: 1.2em;
+}
+
+#postgraduateNews .title i {
+  color: #333333;
+  font-size: 1.2em;
+}
+
+#conferenceNews .title i {
+  color: #107010;
   font-size: 1.2em;
 }
 
