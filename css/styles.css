@@ -284,8 +284,8 @@ img {
 
 #registerProSection .registerPro-left-wrapper,
 #registerProSection .registerPro-right-wrapper {
-  border: 1.5px solid #333333;
-  border-radius: 2px;
+  border: 1.5px solid rgba(51, 51, 51, 1);
+  border-radius: 5px;
   height: 100%;
 }
 
