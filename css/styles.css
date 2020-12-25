@@ -1,12 +1,11 @@
 @font-face {
   font-family: "Roboto";
-  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
-
 
 body {
   color: #333333 !important;
-  font-family: 'Roboto' !important;
+  font-family: "Roboto" !important;
 }
 
 img {
@@ -33,26 +32,26 @@ img {
 
 /* Header */
 .navbar {
-  background-color: hsl(14, 100%, 63%);
-  padding-top: 0 !important;
-  color: '#ffffff';
+  /* background-color: hsl(14, 100%, 63%); */
+  padding: 0 !important;
+  color: "#ffffff";
   /*position: fixed !important;*/
-  top: 0; 
+  top: 0;
   width: 100%;
   /*z-index: 999;*/
   border-radius: 3px;
 }
 .navbar-brand {
-  padding-top: 0
+  padding-top: 0;
 }
 
-.navbar-brand img{
-  height: 100%
+.navbar-brand img {
+  height: 100%;
 }
 .site-name {
   display: inline-block;
   vertical-align: middle;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .search-icon {
@@ -74,7 +73,7 @@ img {
 }
 
 /* Banner */
-#bannerIndicators img{
+#bannerIndicators img {
   max-height: 400px;
 }
 
@@ -86,15 +85,16 @@ img {
 }
 
 .carousel-control-prev span,
-.carousel-control-next span{
+.carousel-control-next span {
   width: 50px;
   height: 50px;
 }
 
 .carousel-indicators li {
-  width: 50px !important;
-  height: 10px !important;
+  width: 12px !important;
+  height: 12px !important;
   background-color: #999999 !important;
+  border-radius: 50%;
 }
 .carousel-indicators .active {
   width: 50px;
@@ -161,6 +161,10 @@ img {
   height: 12px;
 }
 
+.newsSection h3 {
+  font-size: 1.2rem;
+}
+
 .article {
   width: 250px;
   background-color: #ffffff;
@@ -211,11 +215,10 @@ img {
 
 #footer {
   color: #ffffff;
-  background-color: #ff7043;
   border-radius: 3px;
 }
 
-.footer-logo img{
+.footer-logo img {
   width: 90%;
 }
 
@@ -224,17 +227,17 @@ img {
   font-size: 1.05em;
 }
 
-.footer-list li a{
+.footer-list li a {
   color: #ffffff;
 }
 
-.footer-list li a:hover{
+.footer-list li a:hover {
   color: #ffffff;
   list-style-type: none;
   text-decoration: none;
 }
 
-.copyright h6{
+.copyright h6 {
   font-size: 1.1em !important;
 }
 
@@ -258,7 +261,6 @@ img {
 
 /* Register Project Page */
 #registerProSection {
-
 }
 
 #registerProSection .registerPro-left-wrapper,
@@ -282,7 +284,7 @@ img {
   content: "Chọn tệp";
 }
 
-#registerProSection .registerPro-left-title hr{
+#registerProSection .registerPro-left-title hr {
   border-top: 1.5px solid #888888;
 }
 
@@ -306,7 +308,7 @@ img {
   color: #333333;
 }
 
-#registerProSection .registerPro-right-more a{
+#registerProSection .registerPro-right-more a {
   color: #7c410a;
   font-weight: 600;
   text-decoration: underline;
@@ -343,9 +345,9 @@ img {
 
 /* Cancel Registered Project Page */
 #registerProSection .registerPro-left-body table tr th:first-child,
-#registerProSection .registerPro-left-body table tr th:last-child, 
+#registerProSection .registerPro-left-body table tr th:last-child,
 #registerProSection .registerPro-left-body table tr td:first-child,
-#registerProSection .registerPro-left-body table tr td:last-child  {
+#registerProSection .registerPro-left-body table tr td:last-child {
   text-align: center;
 }
 
@@ -356,7 +358,6 @@ img {
 
 /* Search Page */
 #searchResultSection {
-
 }
 
 #searchResultSection .registerPro-left-wrapper,
@@ -371,7 +372,7 @@ img {
   text-align: center;
 }
 
-#searchResultSection .registerPro-left-title hr{
+#searchResultSection .registerPro-left-title hr {
   border-top: 1.5px solid #888888;
 }
 
@@ -389,7 +390,7 @@ img {
   color: #333333;
 }
 
-#searchResultSection .registerPro-right-more a{
+#searchResultSection .registerPro-right-more a {
   color: #7c410a;
   font-weight: 600;
   text-decoration: underline;
@@ -401,18 +402,54 @@ img {
   font-weight: 600;
 }
 
-#searchResultSection .article-title a{
+#searchResultSection .article-title a {
   font-weight: 600;
   color: #333333;
 }
 
-#searchResultSection .article-date{
+#searchResultSection .article-date {
   margin: 20px auto;
   text-align: center;
   font-weight: 600;
 }
 
-#searchResultSection .article-content a{
+#searchResultSection .article-content a {
   font-weight: 600;
   color: #333333;
 }
+
+/* <baobao> */
+/* ^. */
+.sub-title {
+  font-size: 0.95rem;
+}
+
+.sub-title:hover {
+  color: #ff7043 !important;
+  transition: all 0.1s;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.1s;
+}
+
+.menu-bar-custom {
+  height: 68px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.sub-menu a {
+  font-size: 0.8rem !important;
+}
+
+/* </baobao> */
