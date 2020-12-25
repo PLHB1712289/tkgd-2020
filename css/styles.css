@@ -290,6 +290,10 @@ img {
   cursor: pointer;
 }
 
+.fa-download {
+  color: #2d5cc0;
+}
+
 /* Register Project Page */
 #registerProSection {
 }
