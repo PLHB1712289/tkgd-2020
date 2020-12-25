@@ -45,6 +45,12 @@ img {
   padding-top: 0;
 }
 
+#navBar .navbar-nav li:not(:last-child) a {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+}
+
 .navbar-brand img {
   height: 100%;
 }
@@ -72,6 +78,16 @@ img {
   border: none;
 }
 
+.menu-bar li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-bar li a:hover {
+  color: #ffffff !important;
+  background-color: #333333;
+}
 /* Banner */
 #bannerIndicators img {
   max-height: 400px;
@@ -170,6 +186,7 @@ img {
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 3px 3px 3px #aaaaaa;
+  cursor: pointer;
 }
 
 .article .article-image {
@@ -210,7 +227,7 @@ img {
 }
 
 .more a:hover {
-  color: #970909 !important;
+  color: #e77000 !important;
 }
 
 #footer {
@@ -232,7 +249,7 @@ img {
 }
 
 .footer-list li a:hover {
-  color: #ffffff;
+  color: #7c410a;
   list-style-type: none;
   text-decoration: none;
 }
@@ -251,12 +268,14 @@ img {
   border-radius: 100%;
   font-size: 1.7em;
   vertical-align: bottom;
+  cursor: pointer;
 }
 
 .fa-rss-square {
   color: #7c410a;
   font-size: 1.7em;
   vertical-align: bottom;
+  cursor: pointer;
 }
 
 /* Register Project Page */
@@ -430,9 +449,9 @@ img {
 }
 
 .menu-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /*display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;*/
   height: 100%;
 }
 
