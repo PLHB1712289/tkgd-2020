@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
 
-    <title>FIT HCMUS</title>
+    <title id="title-search">Tìm kiếm "Đăng ký"</title>
   </head>
   <body>
     <!-- Menu -->
@@ -62,7 +62,7 @@
               </div>
             </div>
           </li>
-          <li class="nav-item active sub-menu">
+          <li class="nav-item active  sub-menu">
             <a class="nav-link px-4" href="#" role="button" id="teacherDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GIẢNG VIÊN <i class="fa fa-caret-down" aria-hidden="true"></i></a>
             <div class="dropdown px-1">
               <div class="dropdown-menu px-0 py-4" aria-labelledby="teacherDropdownMenu">
@@ -77,7 +77,7 @@
               </div>
             </div>
           </li>
-          <li class="nav-item active sub-menu">
+          <li class="nav-item active  sub-menu">
             <a class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
           </li>
         </ul>
@@ -186,9 +186,9 @@
               </div>
             </li>
             <li class="nav-item active px-4">
-              <form class="form-inline" id="searchForm" action="../searchPage/index.html">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <a class="nav-link" href="#" onclick="document.getElementById('searchForm').submit();"><i class="fas fa-search search-icon text-white"></i></a>
+              <form class="form-inline" id="searchForm">
+                <input id="key-search" class="form-control" type="search" placeholder="Tìm kiếm" aria-label="Search" value="Đăng ký">
+                <a id="searchSubmitBtn" class="nav-link" href="#"><i class="fas fa-search search-icon text-white"></i></a>
               </form>
             </li>
           </ul>
@@ -202,7 +202,7 @@
       <div class="row">
         <div class="col-md-8 registerPro-left">
           <div class="registerPro-left-wrapper py-3 px-2">
-            <h5 class="searchResult px-5 py-2">Tìm thấy <span class="searchResult-number" style="color: red;">3 kết quả</span> liên quan tới từ khóa <span class="searchResult-number" style="color: red;">"Đăng ký"</span></h5>
+            <h5 class="searchResult px-5 py-2">Tìm thấy <span class="searchResult-number" style="color: red;">3 kết quả</span> liên quan tới từ khóa <span id="key-search-result" class="searchResult-keyword" style="color: red;">"Đăng ký"</span></h5>
             <!-- Department Info -->
             <div class="registerPro-title registerPro-left-title px-5 pt-4 pb-1 text-left">
               <h3>THÔNG TIN KHOA</h3>
@@ -240,32 +240,31 @@
               <h6 class="more text-center"><a href="#">Xem thêm</a></h6>
               
             </div>
-            <!-- /Department Info -->
-            <!-- Bussiness Info -->
-            <div class="registerPro-title registerPro-left-title px-5 pt-4 pb-1 text-left">
-              <h3>THÔNG TIN DOANH NGHIỆP</h3>
-              <hr/>
-            </div>
-            <div class="registerPro-left-body px-5">
-              <ul class="px-0">
-                <!-- Article -->
-                <li>
-                  <h6 class="article-title"><a href="#"><span class="searchResult-number" style="color: red; font-style: italic;"><u>Đăng ký</u></span> ứng tuyển học bổng công ty TNHH ScrumViet</a></h6>
-                  <div class="row">
-                    <div class="col-md-2 article-date" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <u>3/12/2020</u>
-                    </div>
-                    <div class="col-md-10 article-content py-2" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <p>Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.</p>
-                    </div>
+          <!-- /Department Info -->
+          <!-- Bussiness Info -->
+          <div class="registerPro-title registerPro-left-title px-5 pt-4 pb-1 text-left">
+            <h3>THÔNG TIN DOANH NGHIỆP</h3>
+            <hr/>
+          </div>
+          <div class="registerPro-left-body px-5">
+            <ul class="px-0">
+              <!-- Article -->
+              <li>
+                <h6 class="article-title"><a href="#"><span class="searchResult-number" style="color: red; font-style: italic;"><u>Đăng ký</u></span> ứng tuyển học bổng công ty TNHH ScrumViet</a></h6>
+                <div class="row">
+                  <div class="col-md-2 article-date" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
+                    <u>3/12/2020</u>
                   </div>
-                </li>
-                <!-- /Article -->
-              </ul>
-              <h6 class="more text-center"><a href="#">Xem thêm</a></h6>
-              
-            </div>
-            <!-- /Bussiness Info -->
+                  <div class="col-md-10 article-content py-2" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
+                    <p>Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.</p>
+                  </div>
+                </div>
+              </li>
+              <!-- /Article -->
+            </ul>
+            <h6 class="more text-center"><a href="#">Xem thêm</a></h6>
+          </div>
+          <!-- /Bussiness Info -->
           </div>
         </div>
         <div class="col-md-4 registerPro-right">
@@ -295,7 +294,7 @@
           </div>
         </div>
       </div>
-      </div>
+    </div>
     <!-- /Body -->
 
     <!-- Footer -->
@@ -345,6 +344,8 @@
     <!-- /Footer -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../javascript/search.js"></script>
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
