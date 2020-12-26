@@ -456,8 +456,8 @@
         let nv2 = document.getElementById("secondChoice").value;
         if (name && mssv && cvFile && scoreFile && ((nv1 && nv2) || (nv1 || nv2)))
         {
-          nguyenvong1 = nv1;
-          nguyenvong2 = nv2;
+          localStorage.setItem("nguyenvong1", nv1);
+          localStorage.setItem("nguyenvong2", nv2);
           window.location.href = '../cancelRegisterProject/index.html';
         }
         else {
