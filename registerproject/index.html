@@ -59,7 +59,7 @@
                 <div class="dropdown-divider w-100"></div>
                 <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng vàng thành tích</a>
                 <div class="dropdown-divider w-100"></div>
-                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
+                <a class="dropdown-item pl-0 pr-5" href="../registerproject/index.html"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
                 <div class="dropdown-divider w-100"></div>
               </div>
             </div>
@@ -241,7 +241,7 @@
                   <label for="firstChoice" class="col-sm-3 col-form-label text-right">Nguyện vọng 1 </label>
                   <div class="col-sm-9 input-group">
                     <div class="input-group-prepend">
-                      <button class="btn btn-light" type="button" id="firstChoiceBtn" data-toggle="modal" data-target="#choiceModal">Chọn</button>
+                      <button class="btn btn-light" type="button" id="firstChoiceBtn" data-toggle="modal" data-target="#choiceModal" onclick="onSelectingNV(0)">Chọn</button>
                     </div>
                     <input type="text" name="firstChoice" class="form-control" id="firstChoice" placeholder="">
                   </div>
@@ -250,13 +250,13 @@
                   <label for="secondChoice" class="col-sm-3 col-form-label text-right">Nguyện vọng 2 </label>
                   <div class="col-sm-9 input-group">
                     <div class="input-group-prepend">
-                      <button class="btn btn-light" type="button" id="secondChoiceBtn" data-toggle="modal" data-target="#choiceModal">Chọn</button>
+                      <button class="btn btn-light" type="button" id="secondChoiceBtn" data-toggle="modal" data-target="#choiceModal" onclick="onSelectingNV(1)">Chọn</button>
                     </div>
                     <input type="text" name="secondChoice" class="form-control" id="secondChoice" placeholder="">
                   </div>
                 </div>
                 <div class="text-center my-4">
-                  <button id="registerProBtn" type="submit" class="btn btn-primary btn-lg px-5" data-toggle="modal" data-target="#errorModal">Đăng ký</button>
+                  <button id="registerProBtn" type="submit" class="btn btn-primary btn-lg px-5" data-toggle="modal" data-target="#errorModal" onclick="onRegister()">Đăng ký</button>
                 </div>
               </form>
             </div>
@@ -307,49 +307,49 @@
               <div class="row choiceWrapper">
                 <div class="col-md-6 p-3">
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="radio1" name="choice" class="custom-control-input">
+                    <input type="radio" id="radio1" name="choice" class="custom-control-input" onclick="onSelectNV('Ứng dụng đọc truyện - ĐATN')">
                     <label class="custom-control-label" for="radio1">Ứng dụng đọc truyện - ĐATN</label>
                   </div>
                 </div>
                 <div class="col-md-6 p-3">
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="radio2" name="choice" class="custom-control-input">
+                    <input type="radio" id="radio2" name="choice" class="custom-control-input" onclick="onSelectNV('Website quản lý phòng khám thú y - ĐATN')">
                     <label class="custom-control-label" for="radio2">Website quản lý phòng khám thú y - ĐATN</label>
                   </div>
                 </div>
                 <div class="col-md-6 p-3">
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="radio3" name="choice" class="custom-control-input">
+                    <input type="radio" id="radio3" name="choice" class="custom-control-input" onclick="onSelectNV('Phân tích xu hướng mạng xã hội - KLTN')">
                     <label class="custom-control-label" for="radio3">Phân tích xu hướng mạng xã hội - KLTN</label>
                   </div>
                 </div>
                 <div class="col-md-6 p-3">
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="radio4" name="choice" class="custom-control-input">
+                    <input type="radio" id="radio4" name="choice" class="custom-control-input" onclick="onSelectNV('Lotus Fitness - TTTN')">
                     <label class="custom-control-label" for="radio4">Lotus Fitness - TTTN</label>
                   </div>
                 </div>
                 <div class="col-md-6 p-3">
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="radio5" name="choice" class="custom-control-input">
+                    <input type="radio" id="radio5" name="choice" class="custom-control-input" onclick="onSelectNV('Website đặt vé xe - ĐATN')">
                     <label class="custom-control-label" for="radio5">Website đặt vé xe - ĐATN</label>
                   </div>
                 </div>
                 <div class="col-md-6 p-3">
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="radio6" name="choice" class="custom-control-input">
+                    <input type="radio" id="radio6" name="choice" class="custom-control-input" onclick="onSelectNV('Ứng dụng học ngoại ngữ bằng FlashCard - ĐATN')">
                     <label class="custom-control-label" for="radio6">Ứng dụng học ngoại ngữ bằng FlashCard - ĐATN</label>
                   </div>
                 </div>
                 <div class="col-md-6 p-3">
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="radio7" name="choice" class="custom-control-input">
+                    <input type="radio" id="radio7" name="choice" class="custom-control-input" onclick="onSelectNV('E-Study - ĐATN')">
                     <label class="custom-control-label" for="radio7">E-Study - ĐATN</label>
                   </div>
                 </div>
                 <div class="col-md-6 p-3">
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="radio8" name="choice" class="custom-control-input">
+                    <input type="radio" id="radio8" name="choice" class="custom-control-input"  onclick="onSelectNV('Website thiết kế nội thất - ĐATN')">
                     <label class="custom-control-label" for="radio8">Website thiết kế nội thất - ĐATN</label>
                   </div>
                 </div>
@@ -357,7 +357,7 @@
             </div>
           </div>
           <div class="modal-footer text-center">
-            <button type="button" class="modalOkBtn btn btn-primary btn-lg">Xác nhận</button>
+            <button type="button" class="modalOkBtn btn btn-primary btn-lg" onclick="onConfirmNV()">Xác nhận</button>
           </div>
         </div>
       </div>
@@ -424,7 +424,47 @@
       </div>
     </div>
     <!-- /Footer -->
-
+    <script src="../javascript/projectGlobalVariable.js"></script>
+    <script type="text/javascript">
+      let selectedNV = "";
+      let selectingNV = 0;
+      const onSelectNV = (value) => {
+        selectedNV = value;
+      }
+      const onSelectingNV = (i) => {
+          selectingNV = i;
+      }
+      let nv = ["",""];
+      const onConfirmNV = () => {
+        nv[selectingNV] = selectedNV;
+        console.log(selectingNV);
+        console.log(selectedNV);
+        if (selectingNV == 1) {
+          document.getElementById("secondChoice").value = selectedNV;
+        }
+        else if (selectingNV == 0) {
+          document.getElementById("firstChoice").value = selectedNV;
+        }
+        $('#choiceModal').modal('hide');
+      }
+      const onRegister = () => {
+        let name = document.getElementById("name").value;
+        let mssv = document.getElementById("mssv").value;
+        let cvFile = document.getElementById("cvFile").value;
+        let scoreFile = document.getElementById("scoreSheetFile").value;
+        let nv1 = document.getElementById("firstChoice").value;
+        let nv2 = document.getElementById("secondChoice").value;
+        if (name && mssv && cvFile && scoreFile && ((nv1 && nv2) || (nv1 || nv2)))
+        {
+          nguyenvong1 = nv1;
+          nguyenvong2 = nv2;
+          window.location.href = '../cancelRegisterProject/index.html';
+        }
+        else {
+          $('#errorModal').modal('show');
+        }
+      }
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../javascript/search.js"></script>
     

@@ -59,7 +59,7 @@
                 <div class="dropdown-divider w-100"></div>
                 <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng vàng thành tích</a>
                 <div class="dropdown-divider w-100"></div>
-                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
+                <a class="dropdown-item pl-0 pr-5" href="../cancelRegisterProject/index.html"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
                 <div class="dropdown-divider w-100"></div>
               </div>
             </div>
@@ -199,7 +199,7 @@
     </div>
     <!-- /Header -->
     <!-- Body -->
-    <div id="registerProSection" class="container my-5">
+    <div id="registerProSection" class="container my-5" onload="onLoadData()">
       <div class="row">
         <div class="col-md-8 registerPro-left">
           <div class="registerPro-left-wrapper py-3 px-3">
@@ -222,13 +222,13 @@
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>Website quản lý phòng khám thú y</td>
-                    <td>ĐATN</td>
+                    <td id="nameChoice1">Website quản lý phòng khám thú y</td>
+                    <td id="typeChoice1">ĐATN</td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>Mạng xã hội ẩm thực</td>
-                    <td>ĐATN</td>
+                    <td id="nameChoice2">Mạng xã hội ẩm thực</td>
+                    <td id="typeChoice2">ĐATN</td>
                   </tr>
                 </tbody>
               </table>
@@ -278,7 +278,7 @@
             <h6 class="font-weight-bold">Bạn có chắc muốn hủy đề tài đã đăng ký ?</h6>
           </div>
           <div class="modal-footer text-center">
-            <button type="button" class="modalOkBtn btn btn-danger px-5 ml-auto">Hủy</button>
+            <button type="button" class="modalOkBtn btn btn-danger px-5 ml-auto" onclick="onClose()">Hủy</button>
             <button type="button" class="modalOkBtn btn btn-light px-5 mr-auto" data-dismiss="modal" aria-label="Close">Giữ</button>
           </div>
         </div>
@@ -331,7 +331,32 @@
       </div>
     </div>
     <!-- /Footer -->
-
+    <script src="../javascript/projectGlobalVariable.js"></script>
+    <script type="text/javascript">
+      const onLoadData = () => {
+        const nv1 = nguyenvong1;
+        const nv2 = nguyenvong1;
+        if (nv1 || nv2) {
+          let name1 = nv1.substring(0, nv1.indexOf('-')).trim();
+          let type1 = nv1.substring(0, nv1.indexOf('-')).trim();
+          let name2 = nv2.substring(nv2.indexOf('-') + 1).trim();
+          let type2 = nv2.substring(nv2.indexOf('-') + 1).trim();
+          document.getElementById("nameChoice1").value = name1;
+          document.getElementById("nameChoice2").value = name2;
+          document.getElementById("typeChoice1").value = type1;
+          document.getElementById("typeChoice2").value = type2;
+        }
+        else {
+          document.getElementById("nameChoice1").value = 'Website quản lý phòng khám thú y';
+          document.getElementById("nameChoice2").value = 'Mạng Xã hội ẩm thực';
+          document.getElementById("typeChoice1").value = 'ĐATN';
+          document.getElementById("typeChoice2").value = 'ĐATN';
+        }
+      }
+      const onClose = () => {
+          window.location.href = '../registerproject/index.html';
+        }
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../javascript/search.js"></script>
     
