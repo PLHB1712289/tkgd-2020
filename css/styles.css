@@ -48,7 +48,7 @@ img {
 #navBar .navbar-nav li:not(:last-child) a {
   width: 100%;
   height: 100%;
-  margin-top: 15px;
+  padding-top: 25px;
 }
 
 .navbar-brand img {
@@ -292,6 +292,7 @@ img {
 
 .fa-download {
   color: #2d5cc0;
+  cursor: pointer;
 }
 
 /* Register Project Page */
