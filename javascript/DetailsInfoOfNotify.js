@@ -166,7 +166,7 @@ if(window.location.href.indexOf("searchPage") !== -1)
 else if (window.location.href.indexOf("searchNotFoundPage") !== -1)
 {
     articles = fakeData['news'];
-   datatype= "news";
+    dataType= "news";
 }
 else if (window.location.href.indexOf("detailNotiStudentPage") !== -1)
 {
