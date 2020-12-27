@@ -44,8 +44,8 @@ const fakeData = {
                             <td>TB_Dang_ky_Hoc_Phan_HK1_2020_2021_CD_MMT.pdf</td>
                             <td class="text-center">Documents</td>
                             <td class="text-center">255,99 KB</td>
-                            <td class="text-center">
-                                <input style="width: 70%; height: 5%;" type="image" src="../images/download.png" style="border-width:0px;">
+                            <td class="text-center">                         
+                            <i class="fas fa-download" aria-hidden="true"></i>
                             </td>
                         </tr>          
                         </tbody>
@@ -99,6 +99,41 @@ const fakeData = {
                     <span><a href="https://www.facebook.com/sdh.fit.hcmus/" style="">https://www.facebook.com/sdh.fit.hcmus/</a></span></span></p>
                     </div>
             </div>
+            <div class="post-attached">
+                <h4>Tập tin đính kèm</h4>
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center">TT</th>
+                            <th class="text-center">Tên file</th>
+                            <th class="text-center">Loại file</th>
+                            <th class="text-center">Kích thước</th>
+                            <th class="text-center">Tải về</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                
+                    <tr>
+                        <td class="text-center">1</td>
+                        <td>KHTN--Qui-dinh-hinh-thuc-va-bao-ve-luan-van-thac-si.doc</td>
+                        <td class="text-center">Document</td>
+                        <td class="text-center">197 KB</td>
+                        <td class="text-center">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2</td>
+                        <td>SDH_DS-hoc-vien-du-dieu-kien-bao-ve-dot-thang-12-2020.pdf</td>
+                        <td class="text-center">Document</td>
+                        <td class="text-center">191,96 KB</td>
+                        <td class="text-center">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                        </td>
+                    </tr>                       
+                    </tbody>
+                </table>   
+            </div>
             `
         },
         {
@@ -121,44 +156,47 @@ const fakeData = {
 
 
 const articleTitle = document.getElementsByClassName("article-title");
-console.log(articleTitle);
 let articles = [];
+let dataType = "";
 if(window.location.href.indexOf("searchPage") !== -1)
 {
     articles = fakeData['registerArticles'];
-    localStorage.setItem("type", "register");
+    dataType = "registerArticles";
 }
 else if (window.location.href.indexOf("searchNotFoundPage") !== -1)
 {
     articles = fakeData['news'];
-    localStorage.setItem("type", "news");
+   datatype= "news";
 }
 else if (window.location.href.indexOf("detailNotiStudentPage") !== -1)
 {
     const type = localStorage.getItem("type");
-    articles = fakeData[type];
+    if (type)
+    {   
+        articles = fakeData[type];
+        console.log(articles);
+    }
+    
 }
 
 for(let i =0; i< articleTitle.length; i++)
 {   
     const subTitle = articles[i].subTitle;
     articleTitle[i].addEventListener('click', ()=>{
-        addInfoToArticle(subTitle);
+        addInfoToArticle(subTitle, dataType);
     })
 }
 function addInfoToArticle(subTitle){
-   
-    console.log(subTitle);
     localStorage.setItem("sub-title", subTitle);
-    
+    localStorage.setItem("type", dataType);
     window.open('../detailNotiStudentPage/index.html', "_self");
 };
 
 window.onload = () =>{
     const subTitle = localStorage.getItem("sub-title");
-    if(subTitle)
+    const type = localStorage.getItem("type");
+    if(subTitle && type)
     {   
-        console.log(subTitle);
         const articleInfo = articles.filter(article=> article.subTitle === subTitle);
         console.log(articleInfo);
         document.getElementById("articleTilte").innerHTML = articleInfo[0].title;
@@ -167,4 +205,5 @@ window.onload = () =>{
         document.getElementsByClassName("detail-notification-content")[0].innerHTML = articleInfo[0].info;
     }
     localStorage.removeItem("sub-title");
+    localStorage.removeItem("type");
 }
