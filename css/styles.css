@@ -173,6 +173,9 @@ img {
 .newsSection .title {
   color: #970909;
 }
+.newsSection .title a {
+  color: #970909;
+}
 .newsSection hr {
   border-top: 1.5px solid #888888;
 }
@@ -542,4 +545,10 @@ img {
   font-size: 0.8rem !important;
 }
 
+.map-frame{
+  box-shadow: 5px 10px 18px #1223;
+  width: 80%;
+  height: 250px;
+  border: 0px;
+}
 /* </baobao> */

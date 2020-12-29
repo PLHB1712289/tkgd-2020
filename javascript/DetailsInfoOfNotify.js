@@ -57,14 +57,14 @@ const fakeData = {
             title: "Đăng ký ứng tuyển học bổng công ty TNHH Scrumviet",
             time: "3/12/2020",
             info:'<div>' +
-            '<div style="color: rgb(34, 34, 34);">Với mong muốn được đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam, và đặc biệt là cho Ngành Công Nghệ Thông Tin, Scrumviet muốn đóng góp toàn bộ số tiền thu được từ vé của Scrum Day Vietnam 2020 vào học bổng tặng các bạn Sinh Viên hiếu học, có hoàn cảnh khó khăn.'
-            +'</div><div style="color: rgb(34, 34, 34);">Điều kiện:</div>' 
-            +'<ul><li style="color: rgb(34, 34, 34);">Là Sinh Viên hệ Cử Nhân/ Cao Đẳng trường ĐHKHTN khoa Công Nghệ Thông Tin.<br></li><li style="color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: small;">Là Sinh Viên đã được chứng nhận có hoàn cảnh khó khăn.<br></li><li style="color: rgb(34, 34, 34);">Là Sinh Viên có Kết quả học tập loại Khá trở lên.</li></ul>'
-            +'<p style="color: rgb(34, 34, 34);">Số lượng học bổng: 6 suất</p>' 
-            +'<p style="color: rgb(34, 34, 34); ">Trị giá mỗi suất: 4.000.000 VNĐ</p>'
-            +' <div style="color: rgb(34, 34, 34);">Sinh viên ứng tuyển học bổng vui lòng nộp các hồ sơ sau qua hệ thống:</div>'
-            +'<ol><li style="color: rgb(34, 34, 34);">CV</li><li style="color: rgb(34, 34, 34);">Mọi thắc mắc về học bổng vui lòng liên hệ qua email:&nbsp;'
-            +'<span style="font-style: italic;">tlsv@fit.hcmus.edu.vn</span></p></div>'
+            `<div style="color: rgb(34, 34, 34);">Với mong muốn được đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam, và đặc biệt là cho Ngành Công Nghệ Thông Tin, Scrumviet muốn đóng góp toàn bộ số tiền thu được từ vé của Scrum Day Vietnam 2020 vào học bổng tặng các bạn Sinh Viên hiếu học, có hoàn cảnh khó khăn.
+            </div><div style="color: rgb(34, 34, 34);">Điều kiện:</div>
+            <ul><li style="color: rgb(34, 34, 34);">Là Sinh Viên hệ Cử Nhân/ Cao Đẳng trường ĐHKHTN khoa Công Nghệ Thông Tin.<br></li><li style="color: rgb(34, 34, 34);">Là Sinh Viên đã được chứng nhận có hoàn cảnh khó khăn.<br></li><li style="color: rgb(34, 34, 34);">Là Sinh Viên có Kết quả học tập loại Khá trở lên.</li></ul>
+            <p style="color: rgb(34, 34, 34);">Số lượng học bổng: 6 suất</p>
+            <p style="color: rgb(34, 34, 34); ">Trị giá mỗi suất: 4.000.000 VNĐ</p>
+            <div style="color: rgb(34, 34, 34);">Sinh viên ứng tuyển học bổng vui lòng nộp các hồ sơ sau qua hệ thống:</div>
+            <ol><li style="color: rgb(34, 34, 34);">CV</li><li style="color: rgb(34, 34, 34);">Mọi thắc mắc về học bổng vui lòng liên hệ qua email:&nbsp;
+            <span style="font-style: italic;">tlsv@fit.hcmus.edu.vn</span></p></div>`
         },
     
     ],
