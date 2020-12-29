@@ -21,8 +21,8 @@ form.addEventListener("submit", (e) => {
 
   const link =
     key.toLowerCase() === "đăng ký"
-      ? "../searchPage/index.html"
-      : "../searchNotFoundPage/index.html";
+      ? "searchPage/index.html"
+      : "searchNotFoundPage/index.html";
 
   window.open(link, "_self");
 });
