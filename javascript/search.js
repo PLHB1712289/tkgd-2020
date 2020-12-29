@@ -18,15 +18,23 @@ form.addEventListener("submit", (e) => {
 
   const key = document.getElementById("key-search").value;
   localStorage.setItem("key", key);
-
+  const path = localStorage.getItem("homepage-github") == true ? "" : "../";
   const link =
     key.toLowerCase() === "đăng ký"
-      ? "searchPage/index.html"
-      : "searchNotFoundPage/index.html";
+      ? `${path}searchPage/index.html`
+      : `${path}searchNotFoundPage/index.html`;
 
   window.open(link, "_self");
 });
 
 document.getElementById("searchSubmitBtn").addEventListener("click", (e) => {
-  form.submit();
+  const key = document.getElementById("key-search").value;
+  localStorage.setItem("key", key);
+  const path = localStorage.getItem("homepage-github") == true ? "" : "../";
+  const link =
+    key.toLowerCase() === "đăng ký"
+      ? `${path}searchPage/index.html`
+      : `${path}searchNotFoundPage/index.html`;
+
+  window.open(link, "_self");
 });

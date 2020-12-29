@@ -189,7 +189,7 @@
             <li class="nav-item active px-4">
               <form class="form-inline" id="searchForm" action="searchPage/index.html">
                 <input id="key-search" class="form-control" type="search" placeholder="Tìm kiếm"  aria-label="Search">
-                <a id="searchSubmitBtn" class="nav-link" href="#"><i class="fas fa-search search-icon text-white"></i></a>
+                <a id="searchSubmitBtn" class="nav-link"><i class="fas fa-search search-icon text-white"></i></a>
               </form>
             </li>
           </ul>
@@ -742,8 +742,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
     <script src="javascript/main.js"></script>
     <script src="javascript/search.js"></script>
+    <script>
+      localStorage.setItem("homepage-github", true);
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
