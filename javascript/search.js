@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
   const key = document.getElementById("key-search").value;
   localStorage.setItem("key", key);
   const path =
-    localStorage.getItem("homepage-github") == true ? "/tkgd-2020/" : "../";
+    localStorage.getItem("homepage-github") != true ? "../" : "/tkgd-2020/";
   const link =
     key.toLowerCase() === "đăng ký"
       ? `${path}searchPage/index.html`
@@ -32,7 +32,7 @@ document.getElementById("searchSubmitBtn").addEventListener("click", (e) => {
   const key = document.getElementById("key-search").value;
   localStorage.setItem("key", key);
   const path =
-    localStorage.getItem("homepage-github") == true ? "/tkgd-2020/" : "../";
+    localStorage.getItem("homepage-github") != true ? "../" : "/tkgd-2020/";
   const link =
     key.toLowerCase() === "đăng ký"
       ? `${path}searchPage/index.html`
