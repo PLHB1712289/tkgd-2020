@@ -14,20 +14,37 @@ img {
 
 /* Scrollbar */
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   background-color: #ffffff;
-}
+  width: 5px;
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px #999999;
-  border-radius: 10px;
-}
+  border-radius: 5px;
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #aaaaaa;
-  border-radius: 10px;
+  border-radius: 5px;
+} */
+
+.newsSectionBody::-webkit-scrollbar {
+  background-color: #ffffff;
+  /* height: 5px; */
+  width: 5px !important;
+}
+
+.newsSectionBody::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px #999999; */
+  border-radius: 5px;
+}
+
+.newsSectionBody::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 5px;
 }
 
 /* Header */
@@ -107,15 +124,17 @@ img {
 }
 
 .carousel-indicators li {
-  width: 12px !important;
-  height: 12px !important;
+  width: 13px !important;
+  height: 13px !important;
   background-color: #999999 !important;
   border-radius: 50%;
 }
 .carousel-indicators .active {
-  width: 50px;
-  height: 10px;
-  background-color: #970909 !important;
+  background-color: white !important;
+}
+
+.carousel-indicators > li:hover {
+  cursor: pointer;
 }
 
 /* Introduction */
