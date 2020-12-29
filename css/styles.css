@@ -409,6 +409,11 @@ img {
   background-color: #aaaaaa;
 }
 
+#choiceModal button.close {
+  position: absolute;
+  right: 3%;
+}
+
 /* Cancel Registered Project Page */
 #registerProSection .registerPro-left-body table tr th:first-child,
 #registerProSection .registerPro-left-body table tr th:last-child,
