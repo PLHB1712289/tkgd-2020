@@ -557,3 +557,8 @@ img {
   border: 0px;
 }
 /* </baobao> */
+
+.asterisk {
+  color: red;
+  font-size: 0.8em;
+}
