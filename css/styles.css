@@ -62,7 +62,7 @@ img {
   padding-top: 0;
 }
 
-#navBar .navbar-nav li:not(:last-child) a {
+#navBar .navbar-nav li.nav-item:not(:last-child) a.nav-link {
   width: 100%;
   height: 100%;
   padding-top: 25px;

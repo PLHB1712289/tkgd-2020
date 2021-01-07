@@ -10,4 +10,6 @@ $(document).ready(function () {
     $('#registerProBtn').on('click', (e) => {
         e.preventDefault();
     })
+
+    $('#name').focus();
 })
