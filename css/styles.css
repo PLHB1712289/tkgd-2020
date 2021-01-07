@@ -352,6 +352,17 @@ img {
   border-left-width: 0;
   border-right: inherit;
   content: "Chọn tệp";
+  z-index: 100000;
+  cursor: pointer;
+}
+
+.fileLabelHover::after {
+  cursor: pointer;
+  background-color: #dddddd !important;
+}
+
+#registerProSection .form-control:disabled {
+  background-color: #ffffff;
 }
 
 #registerProSection .registerPro-left-title hr {
@@ -418,6 +429,10 @@ img {
 
 #choiceModal .custom-control-label::before {
   background-color: #aaaaaa;
+}
+
+#choiceModal .custom-control-label {
+  cursor: pointer;
 }
 
 #choiceModal button.close {

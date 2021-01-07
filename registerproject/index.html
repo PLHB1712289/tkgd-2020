@@ -224,7 +224,7 @@
                   <div class="col-sm-9">
                     <div class="custom-file">
                       <input type="file" name="cv" class="custom-file-input" id="cvFile" aria-describedby="inputGroupFileAddon01">
-                      <label class="custom-file-label text-center" for="cvFile"></label>
+                      <label class="custom-file-label text-center" for="cvFile" id="cvFileLabel"></label>
                     </div>
                   </div>
                 </div>
@@ -233,7 +233,7 @@
                   <div class="col-sm-9">
                     <div class="custom-file">
                       <input type="file" name="scoreSheet" class="custom-file-input" id="scoreSheetFile" aria-describedby="inputGroupFileAddon01">
-                      <label class="custom-file-label text-center" for="scoreSheetFile"></label>
+                      <label class="custom-file-label text-center" for="scoreSheetFile" id="scoreSheetFileLabel"></label>
                     </div>
                   </div>
                 </div>
@@ -243,7 +243,7 @@
                     <div class="input-group-prepend">
                       <button class="btn btn-light" type="button" id="firstChoiceBtn" data-toggle="modal" data-target="#choiceModal" onclick="onSelectingNV(0)">Chọn</button>
                     </div>
-                    <input type="text" name="firstChoice" class="form-control" id="firstChoice" placeholder="">
+                    <input type="text" name="firstChoice" class="form-control" disabled id="firstChoice" placeholder="">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -252,7 +252,7 @@
                     <div class="input-group-prepend">
                       <button class="btn btn-light" type="button" id="secondChoiceBtn" data-toggle="modal" data-target="#choiceModal" onclick="onSelectingNV(1)">Chọn</button>
                     </div>
-                    <input type="text" name="secondChoice" class="form-control" id="secondChoice" placeholder="">
+                    <input type="text" name="secondChoice" class="form-control" disabled id="secondChoice" placeholder="">
                   </div>
                 </div>
               </form>
