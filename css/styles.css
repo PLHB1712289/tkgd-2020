@@ -593,3 +593,56 @@ img {
   color: red;
   font-size: 0.8em;
 }
+
+.search-icon-bar {
+  cursor: pointer;
+}
+
+/* More Search result Page*/
+.moreSearchResultWrapper {
+  border: 1.5px solid rgba(51, 51, 51, 1);
+  border-radius: 5px;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+.moreSearchResultWrapper nav.pagination-nav {
+  margin: 0 auto;
+}
+
+.moreSearchResultWrapper .dropdown-item:active {
+  background-color: #ff7043;
+}
+
+.moreSearchResultWrapper .page-link {
+  color: #7c410a;
+}
+
+.moreSearchResultWrapper .page-link:hover {
+  color: #970909;
+}
+
+.moreSearchResultWrapper .page-link:focus {
+  box-shadow: none;
+}
+
+.moreSearchResultWrapper .page-item.active .page-link {
+  background-color: #7c410a;
+  border-color: #7c410a;
+}
+
+.moreSearchResultWrapper .article-date {
+  margin: 0 auto;
+}
+
+.moreSearchResultWrapper .search-article-thumbnail {
+  width: 60px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.moreSearchResultWrapper .search-article-thumbnail img{
+  width: 100%;
+  height: 100%;
+}
