@@ -261,9 +261,10 @@
                     <input type="text" name="secondChoice" class="form-control" disabled id="secondChoice" placeholder="">
                   </div>
                 </div>
+                <p id="errorRegisterForm" style="color:red;margin-left: 175px;"></p>
               </form>
               <div class="text-center my-4">
-                <button id="registerProBtn" type="submit" class="btn btn-primary btn-lg px-5" data-toggle="modal" data-target="#errorModal" onclick="onRegister()">Đăng ký</button>
+                <button id="registerProBtn" type="submit" class="btn btn-primary btn-lg px-5" data-toggle="modal"  onclick="onRegister()">Đăng ký</button>
               </div>
             </div>
           </div>
@@ -434,7 +435,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
-        
+        $('#registerProForm').focusout(function(){
+          var x=document.getElementById("errorRegisterForm").value;
+          if(x!=""||x!=null)
+          {
+            
+            document.getElementById("errorRegisterForm").innerHTML=""
+          }
+          
+        });
         $('#name').focusout(function(){
           var x=document.getElementById("name").value;
           if(x==""||x==null)
@@ -615,7 +624,7 @@
           window.location.href = '../cancelRegisterProject/index.html';
         }
         else {
-          $('#errorModal').modal('show');
+          document.getElementById("errorRegisterForm").innerHTML="Vui lòng nhập đầy đủ thông tin";
         }
       }
     </script>
