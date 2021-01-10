@@ -209,7 +209,7 @@
             </div>
             <div class="registerPro-left-body">
               <form id="registerProForm" class="pl-0 pr-5 py-3">
-                <div class="form-group row">
+                <div class="form-group row" id="row-name-mssv">
                   <label for="name" class="col-sm-3 col-form-label text-right">Họ tên <span class="asterisk">*</span></label>
                   <div class="col-sm-5">
                     <input type="text" name="fullName" class="form-control" id="name" placeholder="">
@@ -219,7 +219,12 @@
                     <input type="text" name="mssv" class="form-control" id="mssv" placeholder="">
                   </div>
                 </div>
-                <div class="form-group row">
+                <div id="errorNameMssv">
+                  <p id="errorName" style='color:red;margin-left:175px;'></p>
+                  <p id="errorMssv" style='color:red;margin-left:175px;'></p>
+
+                </div>
+                <div class="form-group row" id="row-cv">
                   <label for="cv" class="col-sm-3 col-form-label text-right">CV <span class="asterisk">*</span></label>
                   <div class="col-sm-9">
                     <div class="custom-file">
@@ -228,7 +233,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="form-group row">
+
+                <div class="form-group row" id="row-score">
                   <label for="scoreSheet" class="col-sm-3 col-form-label text-right">Bảng điểm <span class="asterisk">*</span></label>
                   <div class="col-sm-9">
                     <div class="custom-file">
@@ -237,7 +243,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row" id="row-firstchoice">
                   <label for="firstChoice" class="col-sm-3 col-form-label text-right">Nguyện vọng 1 <span class="asterisk">*</span></label>
                   <div class="col-sm-9 input-group">
                     <div class="input-group-prepend">
@@ -246,7 +252,7 @@
                     <input type="text" name="firstChoice" class="form-control" disabled id="firstChoice" placeholder="">
                   </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row" id="row-secondchoice">
                   <label for="secondChoice" class="col-sm-3 col-form-label text-right">Nguyện vọng 2 <span class="asterisk">*</span></label>
                   <div class="col-sm-9 input-group">
                     <div class="input-group-prepend">
@@ -425,6 +431,153 @@
       </div>
     </div>
     <!-- /Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        
+        $('#name').focusout(function(){
+          var x=document.getElementById("name").value;
+          if(x==""||x==null)
+          {
+            
+            document.getElementById("errorName").innerHTML="Họ tên không thể rỗng"
+          }
+          else
+          {
+            document.getElementById("errorName").innerHTML="";
+
+
+          }
+        });
+        $('#mssv').focusout(function(){
+          var x=document.getElementById("mssv").value;
+          if(x==""||x==null)
+          {
+            document.getElementById("errorMssv").innerHTML="MSSV không thể rỗng"
+          }
+          else
+          {
+            document.getElementById("errorMssv").innerHTML="";
+
+
+          }
+        });
+        $('#cvFile').focusout(function(){
+          var x=document.getElementById("cvFile").value;
+          console.log(x);
+          if(x=="")
+          {
+            
+            var check=document.getElementById("errorCvFile");
+            if(check==null)
+            {
+              var para = document.createElement("p");
+              para.id='errorCvFile';
+              para.style.cssText='color:red;margin-left:175px';
+
+              var node = document.createTextNode("CV không thể rỗng");
+              para.appendChild(node);
+              var element = document.getElementById("registerProForm");
+              var child=document.getElementById('row-score');
+              element.insertBefore(para,child);   
+            }
+            
+                 
+          }
+          else
+          {
+            var check=document.getElementById("errorCvFile");
+            if(check!=null)
+            {
+              check.remove();
+            }
+
+          }
+        });
+        $('#scoreSheetFile').focusout(function(){
+          var x=document.getElementById("scoreSheetFile").value;
+          if(x==""||x==null)
+          {
+            var check=document.getElementById("errorScoreSheetFile");
+            if(check===null)
+            {
+              var para = document.createElement("p");
+              para.id='errorScoreSheetFile';
+              para.style.cssText='color:red;margin-left:175px';
+
+              var node = document.createTextNode("Bảng điểm không thể rỗng");
+              para.appendChild(node);
+              var element = document.getElementById("registerProForm");
+              var child=document.getElementById('row-firstchoice');
+              element.insertBefore(para,child); 
+            }
+          }
+          else
+          {
+            var check=document.getElementById("errorScoreSheetFile");
+            if(check!=null)
+            {
+              check.remove();
+            }
+
+          }
+        });
+        $('#firstChoiceBtn').focusout(function(){
+          var x=document.getElementById("firstChoice").value;
+          if(x==""||x==null)
+          {
+            var check=document.getElementById("errorFirstChoice");
+            if(check===null)
+            {
+              var para = document.createElement("p");
+              para.id='errorFirstChoice';
+              para.style.cssText='color:red;margin-left:175px';
+
+              var node = document.createTextNode("Nguyện vọng 1 không thể rỗng");
+              para.appendChild(node);
+              var element = document.getElementById("registerProForm");
+              var child=document.getElementById('row-secondchoice');
+              element.insertBefore(para,child); 
+            }
+          }
+          else
+          {
+            var check=document.getElementById("errorFirstChoice");
+            if(check!=null)
+            {
+              check.remove();
+            }
+
+          }
+        });
+        $('#secondChoiceBtn').focusout(function(){
+          var x=document.getElementById("secondChoice").value;
+          if(x==""||x==null)
+          {
+            var check=document.getElementById("errorSecondChoice");
+            if(check===null)
+            {
+              var para = document.createElement("p");
+              para.id='errorSecondChoice';
+              para.style.cssText='color:red;margin-left:175px';
+
+              var node = document.createTextNode("Nguyện vọng 2 không thể rỗng");
+              para.appendChild(node);
+              var element = document.getElementById("registerProForm");
+              element.appendChild(para); 
+            }
+          }
+          else
+          {
+            var check=document.getElementById("errorSecondChoice");
+            if(check!=null)
+            {
+              check.remove();
+            }
+          }
+        });
+      });
+    </script>
     <script src="../javascript/projectGlobalVariable.js"></script>
     <script type="text/javascript">
       let selectedNV = "";
