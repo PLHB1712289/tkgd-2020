@@ -206,7 +206,7 @@
         <div class="col-md-6">
           <div class="searchPage-bar pl-5 pr-1">
             <div class="input-group md-form form-sm form-2 pl-0">
-              <input class="form-control my-0 py-1 red-border" type="text" placeholder="Tìm kiếm" aria-label="Search">
+              <input id="moreResultSearchInp" class="form-control my-0 py-1 red-border" type="text" placeholder="Tìm kiếm" aria-label="Search" value="Đăng ký">
               <div class="input-group-append">
                 <span class="input-group-text red lighten-3 search-icon-bar"><i class="fas fa-search text-grey"
                     aria-hidden="true"></i></span>
@@ -230,8 +230,8 @@
                   <span class="visually-hidden">Ngày gần đây</span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="sortDropdownMenu">
-                  <li><a class="dropdown-item" href="#">Ngày gần đây</a></li>
-                  <li><a class="dropdown-item" href="#">Ngày xa nhất</a></li>
+                  <li id="sortByDateDesc"><a class="dropdown-item" href="#">Ngày gần đây</a></li>
+                  <li id="sortByDateAsc"><a class="dropdown-item" href="#">Ngày xa nhất</a></li>
                   <li><a class="dropdown-item" href="#">Độ liên quan</a></li>
                 </ul>
               </div>
@@ -245,7 +245,7 @@
           <div class="btn-group row w-100">
             <a type="button" class="btn col-md-4 text-right">Từ</a>
             <div class="col-md-8 pr-0">
-              <input type="date" name="filterFromDate" class="form-control"/>
+              <input id="filterFromDate" type="date" name="filterFromDate" class="form-control"/>
             </div>
           </div>
         </div>
@@ -253,7 +253,7 @@
           <div class="btn-group row w-100">
             <a type="button" class="btn col-md-3 text-right">Tới</a>
             <div class="col-md-8 pr-0">
-              <input type="date" name="filterFromDate" class="form-control"/>
+              <input id="filterToDate" type="date" name="filterToDate" class="form-control"/>
             </div>
           </div>
         </div>
@@ -268,62 +268,8 @@
               <hr/>
             </div>
             <div class="registerPro-left-body px-5">
-              <ul class="px-0">
-                <!-- Article -->
-                <li class="py-4" style="padding-top: 0 !important;">
-                  <h6 class="article-title">
-                    <a href="#">
-                      Thông báo nộp đơn <span class="searchResult-number" style="color: red; font-style: italic;">
-                        <u>đăng ký</u>
-                      </span> Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)
-                    </a>
-                  </h6>
-                  <div class="row">
-                    <div class="col-md-2 article-date my-0" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <div class="search-article-thumbnail"><img src="../images/detail-notification-image-1.png" /></div>
-                      <u>7/12/2020</u>
-                    </div>
-                    <div class="col-md-10 article-content py-2" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <p>BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.</p>
-                    </div>
-                  </div>
-                </li>
-                <!-- /Article -->
-                <!-- Article -->
-                <li class="py-4">
-                  <h6 class="article-title">
-                    <a href="#">
-                      Thông báo <span class="searchResult-number" style="color: red; font-style: italic;"><u>đăng ký </u></span> học phần cho sinh viên bậc Cao đẳng HK1 2020-2021
-                    </a>
-                  </h6>
-                  <div class="row">
-                    <div class="col-md-2 article-date my-0" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <u>14/12/2020</u>
-                    </div>
-                    <div class="col-md-10 article-content py-2" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <p>Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...</p>
-                    </div>
-                  </div>
-                </li>
-                <!-- /Article -->
-                <!-- Article -->
-              <li>
-                <h6 class="article-title">
-                  <a href="#">
-                    <span class="searchResult-number" style="color: red; font-style: italic;"><u>Đăng ký</u></span> ứng tuyển học bổng công ty TNHH ScrumViet
-                  </a>
-                </h6>
-                <div class="row">
-                  <div class="col-md-2 article-date my-0" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                    <div class="search-article-thumbnail"><img src="../images/detail-notification-image-2.png" /></div>
-                    <u>3/12/2020</u>
-                  </div>
-                  <div class="col-md-10 article-content py-2" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                    <p>Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.</p>
-                  </div>
-                </div>
-              </li>
-              <!-- /Article -->
+              <ul id="searchResultList" class="px-0">
+                
               </ul>
             </div>
           <!-- /Department Info -->
@@ -425,14 +371,6 @@
     <!-- Optional JavaScript -->
     <script src="../javascript/registerproject.js"></script>
     <script src="../javascript/DetailsInfoOfNotify.js"></script>
-    <script>
-      $(document).ready(function() {
-          $('.mdb-select').materialSelect();
-          $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
-          $(this).closest('.select-outline').find('label').toggleClass('active');
-          $(this).closest('.select-outline').find('.caret').toggleClass('active');
-        });
-      });
-    </script>
+    <script src="../javascript/renderSearchResult.js"></script>
   </body>
 </html>

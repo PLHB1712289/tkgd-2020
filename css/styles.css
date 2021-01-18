@@ -610,6 +610,15 @@ img {
   margin: 0 auto;
 }
 
+.moreSearchResultWrapper .dropdown-menu li {
+  cursor: pointer;
+}
+
+.moreSearchResultWrapper .dropdown-menu li:hover .dropdown-item {
+  color: #ffffff;
+  background-color: #ff7043;
+}
+
 .moreSearchResultWrapper .dropdown-item:active {
   background-color: #ff7043;
 }
@@ -633,6 +642,7 @@ img {
 
 .moreSearchResultWrapper .article-date {
   margin: 0 auto;
+  text-align: right !important;
 }
 
 .moreSearchResultWrapper .search-article-thumbnail {
