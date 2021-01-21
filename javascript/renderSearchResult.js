@@ -4,7 +4,7 @@ $(document).ready(function () {
     const $filterFromDate = $('#filterFromDate');
     const $filterToDate = $('#filterToDate');
 
-    $filterFromDate.val((new Date).toISOString().substr(0, 10));
+    //$filterFromDate.val((new Date).toISOString().substr(0, 10));
     $filterToDate.val((new Date).toISOString().substr(0, 10));
     let key = localStorage.getItem("key");
 
@@ -13,35 +13,44 @@ $(document).ready(function () {
     } else {
         key = "Đăng ký";
     }
-    const articles = [
+    const allArticles = [
         {
             title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
             date: "14/12/2020",
             summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
-            link: "../detailNotiStudentPage/index.html"
+            link: "../detailNotiStudentPage/index.html",
+            view: 52626
         },
         {
             title: "Thông báo nộp đơn đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)",
             date: "07/12/2020",
             thumbnail: "../images/detail-notification-image-1.png",
             summary: "BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.",
-            link: "../detailNotiStudentPage/index.html"
+            link: "../detailNotiStudentPage/index.html",
+            view: 12563
         },
         {
             title: "Đăng ký ứng tuyển học bổng công ty TNHH ScrumViet",
             date: "03/12/2020",
             thumbnail: "../images/detail-notification-image-2.png",
             summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
-            link: "../detailNotiStudentPage/index.html"
+            link: "../detailNotiStudentPage/index.html",
+            view: 83636
         }  
     ];
 
-    const sortByDateAsc = () => {
+    const displayedArtciles = [...allArticles];
+
+    const sortByDateAsc = (articles) => {
         articles.sort(compareDateAsc);
     }
 
-    const sortByDateDesc = () => {
+    const sortByDateDesc = (articles) => {
         articles.sort(compareDateDesc);
+    }
+
+    const sortByPopularityDesc = (articles) => {
+        articles.sort(comparePopularityDesc);
     }
 
     const compareDateAsc = (art1, art2) => {
@@ -52,7 +61,19 @@ $(document).ready(function () {
         return (new Date(art2.date.replace( /(\d{2})\/(\d{2})\/(\d{4})/, "$2/$1/$3"))).getTime() - (new Date(art1.date.replace( /(\d{2})\/(\d{2})\/(\d{4})/, "$2/$1/$3"))).getTime();
     }
 
-    const renderResult = (keyword) => {
+    const comparePopularityDesc = (art1, art2) => {
+        return art2.view - art1.view;
+    }
+
+    const filterByDate = (dateStr, fromStr, toStr) => {
+        const from = (new Date(fromStr)).getTime();
+        const to = (new Date(toStr)).getTime();
+        const today = (new Date(dateStr.replace( /(\d{2})\/(\d{2})\/(\d{4})/, "$2/$1/$3"))).getTime();
+        return today >= from && today <= from;
+
+    }
+
+    const renderResult = (articles, keyword) => {
         articles.forEach((article) => {
             const keywordRegex = new RegExp(keyword, "gi");
             let title = article.title.replace(keywordRegex, (matching) => {
@@ -77,17 +98,23 @@ $(document).ready(function () {
             $searchResultList.append($li);
         })
     }
-    renderResult(key);
+    renderResult(displayedArtciles, key);
 
     $('#sortByDateDesc').on('click', (e) => {
-        sortByDateDesc();
+        sortByDateDesc(displayedArtciles);
         $searchResultList.empty();
-        renderResult(key);
+        renderResult(displayedArtciles, key);
     })
 
     $('#sortByDateAsc').on('click', (e) => {
-        sortByDateAsc();
+        sortByDateAsc(displayedArtciles);
         $searchResultList.empty();
-        renderResult(key);
+        renderResult(displayedArtciles, key);
+    })
+
+    $('#sortByPopularity').on('click', (e) => {
+        sortByPopularityDesc(displayedArtciles);
+        $searchResultList.empty();
+        renderResult(displayedArtciles, key);
     })
 })
