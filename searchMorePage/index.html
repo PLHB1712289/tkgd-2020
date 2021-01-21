@@ -207,7 +207,7 @@
           <div class="searchPage-bar pl-5 pr-1">
             <div class="input-group md-form form-sm form-2 pl-0">
               <input id="moreResultSearchInp" class="form-control my-0 py-1 red-border" type="text" placeholder="Tìm kiếm" aria-label="Search" value="Đăng ký">
-              <div class="input-group-append">
+              <div id="moreResultSearchSubmit" class="input-group-append">
                 <span class="input-group-text red lighten-3 search-icon-bar"><i class="fas fa-search text-grey"
                     aria-hidden="true"></i></span>
               </div>
@@ -261,7 +261,7 @@
       <div class="row">
         <div class="col-md-12 registerPro-left">
           <div class="py-3 px-2">
-            <h5 class="searchResult px-5 py-2">Tìm thấy <span class="searchResult-number" style="color: red;">3 kết quả</span> liên quan tới từ khóa <span id="key-search-result" class="searchResult-keyword" style="color: red;">"Đăng ký"</span></h5>
+            <h5 class="searchResult px-5 py-2">Tìm thấy <span id="searchResultCount" class="searchResult-number" style="color: red;">3 kết quả</span> liên quan tới từ khóa <span id="key-search-result" class="searchResult-keyword" style="color: red;">"Đăng ký"</span></h5>
             <!-- Department Info -->
             <div class="registerPro-title registerPro-left-title px-5 pt-4 pb-1 text-left">
               <h3>THÔNG TIN KHOA</h3>
@@ -280,15 +280,15 @@
       <div class="row">
         <nav aria-label="Page navigation example" class="pagination-nav">
           <div class="pagination p1">
-            <ul>
-              <a href="#"><li><</li></a>
+            <ul id="searchMorePagination">
+              <a href="#"><li><<</li></a>
               <a class="is-active" href="#"><li>1</li></a>
               <a href="#"><li>2</li></a>
               <a href="#"><li>3</li></a>
               <a href="#"><li>4</li></a>
               <a href="#"><li>5</li></a>
               <a href="#"><li>6</li></a>
-              <a href="#"><li>></li></a>
+              <a href="#"><li>>></li></a>
             </ul>
           </div>
         </nav>
