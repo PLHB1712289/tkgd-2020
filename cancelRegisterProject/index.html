@@ -276,8 +276,8 @@
             <hr />
           </div>
           <div class="registerPro-left-body">
-            <div class="registerPro-date my-3">
-              Ngày Đăng ký: 10/12/2020
+            <div class="registerPro-date my-3" id="regDate">
+              Ngày Đăng ký: 23/01/2020
             </div>
             <table class="table table-bordered">
               <thead class="thead-light">
@@ -430,6 +430,14 @@
         document.getElementById("typeChoice1").innerHTML = 'ĐATN';
         document.getElementById("typeChoice2").innerHTML = 'ĐATN';
       }
+	  
+		let today = new Date();
+		let dd = String(today.getDate()).padStart(2, '0');
+		let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+		let yyyy = today.getFullYear();
+
+		today = dd + '/' + mm + '/' + yyyy;
+		document.getElementById("regDate").innerText = "Ngày đăng ký: " + today;
     }
     const onClose = () => {
       console.log('aas')

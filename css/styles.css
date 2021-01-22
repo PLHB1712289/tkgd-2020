@@ -188,6 +188,9 @@ img {
 
 .info-item-detail {
   color: #000000;
+ 
+  font-size: 1rem;
+  font-family: "Roboto";
 }
 
 /* Body */
