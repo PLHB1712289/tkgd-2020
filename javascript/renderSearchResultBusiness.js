@@ -40,7 +40,7 @@ $(document).ready(function () {
             view: 9286
         },
         {
-            title: "Đăng ký học bổng ACECOOK HAPPY SCHOLARSHIP",
+            title: "Thông báo đăng ký học bổng ACECOOK HAPPY SCHOLARSHIP",
             date: "11/01/2021",
             thumbnail: "../images/search-thumbnail-2.jfif",
             summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ACECOOK.",
@@ -109,7 +109,7 @@ $(document).ready(function () {
         },
         {
             title: "Đăng ký ứng tuyển học bổng công ty TNHH ScrumViet",
-            date: "09/01/2021",
+            date: "12/01/2021",
             thumbnail: "../images/detail-notification-image-2.png",
             summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
             link: "../detailNotiTeacherPage/index.html",
