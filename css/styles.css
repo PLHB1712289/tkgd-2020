@@ -249,11 +249,9 @@ img {
   font-style: italic;
 }
 
-#latestNews .title img {
-  width: 40px;
-  height: 40px;
+#latestNews .title i {
   color: red;
-  vertical-align: bottom;
+  font-size: 1.2em;
 }
 
 #studentNews .title i {
