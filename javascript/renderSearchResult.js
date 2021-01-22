@@ -86,7 +86,7 @@ $(document).ready(function () {
             view: 9286
         },
         {
-            title: 'Đăng ký Cuộc thi "Hành trình Sống đẹp" do PNJ phối hợp cùng Quỹ Thời báo Kinh tế Sài Gòn (STF) tổ chức.',
+            title: 'Thông báo đăng ký cuộc thi "Hành trình Sống đẹp" do PNJ phối hợp cùng Quỹ Thời báo Kinh tế Sài Gòn (STF) tổ chức.',
             date: "11/01/2021",
             thumbnail: "../images/search-thumbnail-3.jfif",
             summary: "Không cần những bộ hồ sơ “hoành tráng” hay bảng thành tích với những con số “khủng”, săn học bổng chưa bao giờ dễ đến thế với tổng giá trị giải thưởng lên đến hơn 250 triệu đồng.",
