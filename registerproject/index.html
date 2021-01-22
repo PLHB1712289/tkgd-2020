@@ -263,7 +263,7 @@
                     <input type="text" name="secondChoice" class="form-control" disabled id="secondChoice" placeholder="">
                   </div>
                 </div>
-                <p id="errorRegisterForm" style="color:red;margin-left: 175px;"></p>
+                <p id="errorRegisterForm" style="color:red;margin-left: 175px;align-text: center"></p>
               </form>
               <div class="text-center my-4">
                 <button id="registerProBtn" type="submit" class="btn btn-primary btn-lg px-5" data-toggle="modal"  onclick="onRegister()">Đăng ký</button>
@@ -442,44 +442,7 @@
     <!-- /Footer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-      $(document).ready(function(){
-        $('#registerProForm').focusout(function(){
-          var x=document.getElementById("errorRegisterForm").value;
-          if(x!=""||x!=null)
-          {
-            
-            document.getElementById("errorRegisterForm").innerHTML=""
-          }
-          
-        });
-        $('#name').focusout(function(){
-          var x=document.getElementById("name").value;
-          if(x==""||x==null)
-          {
-            
-            document.getElementById("errorName").innerHTML="Họ tên không thể rỗng"
-          }
-          else
-          {
-            document.getElementById("errorName").innerHTML="";
-
-
-          }
-        });
-        $('#mssv').focusout(function(){
-          var x=document.getElementById("mssv").value;
-          if(x==""||x==null)
-          {
-            document.getElementById("errorMssv").innerHTML="MSSV không thể rỗng"
-          }
-          else
-          {
-            document.getElementById("errorMssv").innerHTML="";
-
-
-          }
-        });
-        $('#cvFile').focusout(function(){
+	const onCVfileSelect = function(){
           var x=document.getElementById("cvFile").value;
           console.log(x);
           if(x=="")
@@ -490,16 +453,15 @@
             {
               var para = document.createElement("p");
               para.id='errorCvFile';
-              para.style.cssText='color:red;margin-left:175px';
+              para.style.cssText='color:red;margin-left:175px;margin-top:0px;margin-bottom:0px;';
 
               var node = document.createTextNode("CV không thể rỗng");
               para.appendChild(node);
               var element = document.getElementById("registerProForm");
               var child=document.getElementById('row-score');
               element.insertBefore(para,child);   
+			  document.getElementById("row-cv").style.marginBottom = '0px';
             }
-            
-                 
           }
           else
           {
@@ -507,11 +469,12 @@
             if(check!=null)
             {
               check.remove();
+			  document.getElementById("row-cv").style.marginBottom = '1.5rem';
             }
 
           }
-        });
-        $('#scoreSheetFile').focusout(function(){
+        };
+		const onScoreSelect = function(){
           var x=document.getElementById("scoreSheetFile").value;
           if(x==""||x==null)
           {
@@ -520,13 +483,15 @@
             {
               var para = document.createElement("p");
               para.id='errorScoreSheetFile';
-              para.style.cssText='color:red;margin-left:175px';
+              para.style.cssText='color:red;margin-left:175px;margin-top:0px;margin-bottom:0px;';
 
               var node = document.createTextNode("Bảng điểm không thể rỗng");
               para.appendChild(node);
               var element = document.getElementById("registerProForm");
               var child=document.getElementById('row-firstchoice');
               element.insertBefore(para,child); 
+			  document.getElementById("row-score").style.marginBottom = '0px';
+			  
             }
           }
           else
@@ -535,27 +500,76 @@
             if(check!=null)
             {
               check.remove();
+			  document.getElementById("row-score").style.marginBottom = '1.5rem';
             }
 
           }
-        });
-        $('#firstChoiceBtn').focusout(function(){
-          var x=document.getElementById("firstChoice").value;
+        }
+		const onNameChange = function(){
+          var x=document.getElementById("name").value;
           if(x==""||x==null)
+          {
+            
+            document.getElementById("errorName").innerHTML="Họ tên không thể rỗng";
+			document.getElementById("row-name-mssv").style.marginBottom = '0px';
+          }
+          else
+          {
+            document.getElementById("errorName").innerHTML="";
+			document.getElementById("row-name-mssv").style.marginBottom = '1.5rem';
+			let errorMSSV = document.getElementById("errorMssv");
+			if (errorMSSV == null || errorMSSV.innerHTML == "") {
+				document.getElementById("row-name-mssv").style.marginBottom = '1.5rem';
+			}
+          }
+        };
+		const onMSSVChange = function(){
+          var x=document.getElementById("mssv").value;
+          if(x==""||x==null)
+          {
+            document.getElementById("errorMssv").innerHTML="MSSV không thể rỗng";
+			document.getElementById("row-name-mssv").style.marginBottom = '0px';
+          }
+          else
+          {
+            document.getElementById("errorMssv").innerHTML="";
+			let errorName = document.getElementById("errorName");
+			if (errorName == null || errorName.innerHTML == "") {
+				document.getElementById("row-name-mssv").style.marginBottom = '1.5rem';
+			}
+			
+          }
+        };
+		const onFirstChange = function(){
+          var x=document.getElementById("firstChoice").value;
+		  var secValue =document.getElementById("secondChoice").value;
+          if(x==""||x==null || (secValue == x && secValue != null && secValue != ""))
           {
             var check=document.getElementById("errorFirstChoice");
             if(check===null)
             {
               var para = document.createElement("p");
               para.id='errorFirstChoice';
-              para.style.cssText='color:red;margin-left:175px';
+              para.style.cssText='color:red;margin-left:175px;margin-top:0px;margin-bottom:0px;';
 
-              var node = document.createTextNode("Nguyện vọng 1 không thể rỗng");
+              let nodeValue = "Nguyện vọng 1 không thể rỗng";
+			  if (secValue == x && x != null && x != "") {
+				nodeValue = "Nguyện vọng 1 không thể giống nguyện vọng 2";
+			  }
+			  var node = document.createTextNode(nodeValue);
               para.appendChild(node);
               var element = document.getElementById("registerProForm");
               var child=document.getElementById('row-secondchoice');
               element.insertBefore(para,child); 
+			  document.getElementById("row-firstchoice").style.marginBottom = '0px';
             }
+			else {
+			  let nodeValue = "Nguyện vọng 1 không thể rỗng";
+			  if (secValue == x && x != null && x != "") {
+				nodeValue = "Nguyện vọng 1 không thể giống nguyện vọng 2";
+			  }
+			  check.innerText = nodeValue;
+			}
           }
           else
           {
@@ -563,26 +577,43 @@
             if(check!=null)
             {
               check.remove();
+			  document.getElementById("row-firstchoice").style.marginBottom = '1.5rem';
             }
-
           }
-        });
-        $('#secondChoiceBtn').focusout(function(){
+        };
+		const onSecChange = function(){
           var x=document.getElementById("secondChoice").value;
-          if(x==""||x==null)
+		  var firstValue=document.getElementById("firstChoice").value;
+          if(x==""||x==null || (firstValue == x && firstValue != null && firstValue != ""))
           {
             var check=document.getElementById("errorSecondChoice");
             if(check===null)
             {
               var para = document.createElement("p");
               para.id='errorSecondChoice';
-              para.style.cssText='color:red;margin-left:175px';
+              para.style.cssText='color:red;margin-left:175px;margin-top:0px;margin-bottom:0px;';
 
-              var node = document.createTextNode("Nguyện vọng 2 không thể rỗng");
+              let nodeValue = "Nguyện vọng 2 không thể rỗng";
+			  if (firstValue == x && x != null && x != "") {
+				nodeValue = "Nguyện vọng 2 không thể giống nguyện vọng 1";
+			  }
+			  var node = document.createTextNode(nodeValue);
               para.appendChild(node);
               var element = document.getElementById("registerProForm");
-              element.appendChild(para); 
+			  var errorRegister = document.getElementById("errorRegisterForm");
+			  if (errorRegister == null)
+				element.appendChild(para); 
+			  else 
+			    element.insertBefore(para,errorRegister); 
+			  document.getElementById("row-secondchoice").style.marginBottom = '0px';
             }
+			else {
+			  let nodeValue = "Nguyện vọng 2 không thể rỗng";
+			  if (firstValue == x && x != null && x != "") {
+				nodeValue = "Nguyện vọng 2 không thể giống nguyện vọng 1";
+			  }
+			  check.innerText = nodeValue;
+			}
           }
           else
           {
@@ -590,12 +621,40 @@
             if(check!=null)
             {
               check.remove();
+			  document.getElementById("row-secondchoice").style.marginBottom = '1.5rem';
             }
           }
+        }
+      $(document).ready(function(){
+        $('#registerProForm').focusout(function(){
+          var x=document.getElementById("errorRegisterForm").value;
+          if(x!=""||x!=null)
+          {
+            
+            document.getElementById("errorRegisterForm").innerHTML=""
+          }
+          
         });
+        $('#name').focusout(onNameChange);
+		$('#name').change(onNameChange);
+        $('#mssv').focusout(onMSSVChange);
+		$('#mssv').change(onMSSVChange);
+        $('#cvFile').focusout(onCVfileSelect);
+		$('#cvFile').change(onCVfileSelect);
+        $('#scoreSheetFile').focusout(onScoreSelect);
+		$('#scoreSheetFile').change(onScoreSelect);
+        $('#firstChoiceBtn').focusout(onFirstChange);
+		$('#firstChoiceBtn').change(onFirstChange);
+		$('#secondChoiceBtn').focusout(onSecChange);
+        $('#secondChoiceBtn').change(onSecChange);
       });
     </script>
     <script src="../javascript/projectGlobalVariable.js"></script>
+	<style> 
+		.row {
+			margin-bottom: 1.5rem;
+		}
+	</style>
     <script type="text/javascript">
       let selectedNV = "";
       let selectingNV = 0;
@@ -612,9 +671,11 @@
         console.log(selectedNV);
         if (selectingNV == 1) {
           document.getElementById("secondChoice").value = selectedNV;
+		  onSecChange();
         }
         else if (selectingNV == 0) {
           document.getElementById("firstChoice").value = selectedNV;
+		  onFirstChange();
         }
         $('#choiceModal').modal('hide');
       }
@@ -632,7 +693,7 @@
           window.location.href = '../cancelRegisterProject/index.html';
         }
         else {
-          document.getElementById("errorRegisterForm").innerHTML="Vui lòng nhập đầy đủ thông tin";
+          //document.getElementById("errorRegisterForm").innerHTML="Vui lòng nhập đầy đủ thông tin";
         }
       }
     </script>

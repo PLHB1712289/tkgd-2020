@@ -187,7 +187,7 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item active px-4">
+            <li class="nav-item active px-4 d-none">
               <form class="form-inline" id="searchForm">
                 <input id="key-search" class="form-control" type="search" placeholder="Tìm kiếm" aria-label="Search" value="Đăng ký">
                 <a id="searchSubmitBtn" class="nav-link" href="#"><i class="fas fa-search search-icon text-white"></i></a>
@@ -207,7 +207,7 @@
           <div class="searchPage-bar pl-5 pr-1">
             <div class="input-group md-form form-sm form-2 pl-0">
               <input id="moreResultSearchInp" class="form-control my-0 py-1 red-border" type="text" placeholder="Tìm kiếm" aria-label="Search" value="Đăng ký">
-              <div class="input-group-append">
+              <div id="moreResultSearchSubmit" class="input-group-append">
                 <span class="input-group-text red lighten-3 search-icon-bar"><i class="fas fa-search text-grey"
                     aria-hidden="true"></i></span>
               </div>
@@ -232,7 +232,7 @@
                 <ul class="dropdown-menu" aria-labelledby="sortDropdownMenu">
                   <li id="sortByDateDesc"><a class="dropdown-item" href="#">Ngày gần đây</a></li>
                   <li id="sortByDateAsc"><a class="dropdown-item" href="#">Ngày xa nhất</a></li>
-                  <li><a class="dropdown-item" href="#">Độ liên quan</a></li>
+                  <li id="sortByPopularity"><a class="dropdown-item" href="#">Độ phổ biến</a></li>
                 </ul>
               </div>
             </div>
@@ -261,13 +261,17 @@
       <div class="row">
         <div class="col-md-12 registerPro-left">
           <div class="py-3 px-2">
-            <h5 class="searchResult px-5 py-2">Tìm thấy <span class="searchResult-number" style="color: red;">3 kết quả</span> liên quan tới từ khóa <span id="key-search-result" class="searchResult-keyword" style="color: red;">"Đăng ký"</span></h5>
+            <h5 class="searchResult px-5 py-2">Tìm thấy <span id="searchResultCount" class="searchResult-number" style="color: red;">3 kết quả</span> liên quan tới từ khóa <span id="key-search-result" class="searchResult-keyword" style="color: red;">"Đăng ký"</span></h5>
             <!-- Department Info -->
             <div class="registerPro-title registerPro-left-title px-5 pt-4 pb-1 text-left">
               <h3>THÔNG TIN KHOA</h3>
               <hr/>
             </div>
             <div class="registerPro-left-body px-5">
+              <div id="filterErrorMsg" class="filter-error-msg">
+                <h3>Không tìm thấy kết quả nào thuộc khoảng thời gian lựa chọn</h3>
+                <img src="../images/not-found-icon.svg" width="220" height="220"/>
+              </div>
               <ul id="searchResultList" class="px-0">
                 
               </ul>
@@ -280,15 +284,15 @@
       <div class="row">
         <nav aria-label="Page navigation example" class="pagination-nav">
           <div class="pagination p1">
-            <ul>
-              <a href="#"><li><</li></a>
+            <ul id="searchMorePagination">
+              <!--<a href="#"><li><<</li></a>
               <a class="is-active" href="#"><li>1</li></a>
               <a href="#"><li>2</li></a>
               <a href="#"><li>3</li></a>
               <a href="#"><li>4</li></a>
               <a href="#"><li>5</li></a>
               <a href="#"><li>6</li></a>
-              <a href="#"><li>></li></a>
+              <a href="#"><li>>></li></a>-->
             </ul>
           </div>
         </nav>

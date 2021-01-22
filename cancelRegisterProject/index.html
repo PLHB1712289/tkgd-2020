@@ -399,10 +399,10 @@
       const nv1 = localStorage.getItem("nguyenvong1");
       const nv2 = localStorage.getItem("nguyenvong2");
       if (nv1 || nv2) {
-        let name1 = nv1.substring(0, nv1.indexOf('-')).trim();
-        let name2 = nv2.substring(0, nv2.indexOf('-')).trim();
-        let type1 = nv1.substring(nv1.indexOf('-') + 1).trim();
-        let type2 = nv2.substring(nv2.indexOf('-') + 1).trim();
+        let name1 = nv1.substring(0, nv1.lastIndexOf('-')).trim();
+        let name2 = nv2.substring(0, nv2.lastIndexOf('-')).trim();
+        let type1 = nv1.substring(nv1.lastIndexOf('-') + 1).trim();
+        let type2 = nv2.substring(nv2.lastIndexOf('-') + 1).trim();
         document.getElementById("nameChoice1").innerHTML = name1;
         document.getElementById("nameChoice2").innerHTML = name2;
         document.getElementById("typeChoice1").innerHTML = type1;
