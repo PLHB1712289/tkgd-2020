@@ -105,6 +105,10 @@ img {
   border: none;
 }
 
+.menu-bar li:nth-last-child(2) {
+  border: none;
+}
+
 .menu-bar li a {
   display: block;
   width: 100%;
@@ -114,6 +118,11 @@ img {
 .menu-bar li a:hover {
   color: #ffffff !important;
   background-color: #333333;
+}
+
+#settingCompo .fa-address-card,
+#settingCompo .fa-sign-out-alt  {
+  font-size: 16px;
 }
 /* Banner */
 #bannerIndicators img {
@@ -579,6 +588,10 @@ img {
 
 .sub-menu a {
   font-size: 0.8rem !important;
+}
+
+.sub-menu .dropdown-menu {
+  margin: 0;
 }
 
 .map-frame {
