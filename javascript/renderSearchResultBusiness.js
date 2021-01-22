@@ -25,85 +25,85 @@ $(document).ready(function () {
     let sortOption = 0;
     const allArticles = [
         {
-            title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
+            title: "Đăng ký học bổng VIETHOPE năm học 2020-2021 dành cho Tân Sinh viên khóa 2020",
             date: "14/12/2020",
-            summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
+            summary: "Đối tượng dự tuyển Tân Sinh viên năm 2020; Có nhu cầu cần hỗ trợ chi phí học tập: có hoàn cảnh kinh tế gia đình khó khăn, thu nhập gia đình không đủ trang trải các khoản chi phí liên quan đến việc học tập; Thành tích học tập khá, giỏi;",
             link: "../detailNotiStudentPage/index.html",
             view: 52626
         },
         {
-            title: "Thông báo nộp đơn đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)",
+            title: "Thông báo đăng ký học bổng Mitsubishi UFJ Foundation năm 2020",
             date: "03/01/2021",
-            thumbnail: "../images/detail-notification-image-1.png",
-            summary: "BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.",
+            thumbnail: "../images/search-thumbnail-5.jfif",
+            summary: "Đối tượng dự tuyển Sinh viên khóa 2017 hoặc 2018, có tư cách đạo đức tốt Sinh viên có điểm trung bình năm học 2019-2020 từ 8.0 trở lên, ưu tiên các sinh viên đã nhận học bổng Mitsubishi UFJ Foundation năm học 2019-2020;Điểm rèn luyện học kì 1 năm học 2019-2020 từ 80 điểm trở lên;",
             link: "../detailNotiStudentPage/index.html",
             view: 9286
         },
         {
-            title: "Đăng ký ứng tuyển học bổng công ty TNHH ScrumViet",
+            title: "Đăng ký học bổng ACECOOK HAPPY SCHOLARSHIP",
             date: "11/01/2021",
-            thumbnail: "../images/detail-notification-image-2.png",
-            summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
+            thumbnail: "../images/search-thumbnail-2.jfif",
+            summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ACECOOK.",
             link: "../detailNotiTeacherPage/index.html",
             view: 9252
         },
         {
-            title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
+            title: "Thông báo đăng ký học bổng của công ty WILLOGY (AI & ROBOTICS) năm 2021",
             date: "25/12/2020",
-            summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
+            summary: "Willogy (https://willogy.io) là công ty khởi nghiệp công nghệ dịch vụ và xây dựng giải pháp, sản phẩm chuyên về Artificial Intelligence (AI) và Robotics. Công ty được thành lập bởi các nhà nghiên cứu và kỹ sưđã từng là kỹ sư trưởng",
             link: "../detailNotiStudentPage/index.html",
             view: 26176
         },
         {
-            title: "Đăng ký ứng tuyển học bổng công ty TNHH ScrumViet",
+            title: "Thông tin đăng ký Giải thưởng HONDA năm 2021",
             date: "11/01/2021",
-            thumbnail: "../images/detail-notification-image-2.png",
-            summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
+            thumbnail: "../images/search-thumbnail-1.jfif",
+            summary: "Nhằm khuyến khích và nâng cao tinh thần học tập, góp phần tích cực vào sự phát triển toàn diện của các bạn sinh viên, đồng thời đóng góp cho sự phát triển của nền giáo dục nước nhà cũng như sự phát triển của đất nước Việt Nam", 
             link: "../detailNotiTeacherPage/index.html",
             view: 3625
         },
         {
-            title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
+            title: "Thông tin đăng ký chương trình KIT - Japan Online Spring School 2021",
             date: "06/01/2021",
-            summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
+            summary: "Nhà trường có nhận được thông tin về chương trình KIT - Japan Online Spring School 2021 của Viện Kỹ thuật Kyoto, Nhật Bản - Đối tượng tham gia: sinh viên năm 2,3,4 ngành Công nghệ thông tin và Công nghệ sinh học- Số lượng: 10 sinh viên, mỗi ngành 5 sinh viên.",
             link: "../detailNotiStudentPage/index.html",
             view: 1232
         },
         {
-            title: "Thông báo nộp đơn đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)",
+            title: "KMS FRESHER - Đăng ký trở thành Nhân viên chính thức tại KMS với đầy đủ phúc lợi từ ngày đầu tiên",
             date: "07/01/2021",
-            thumbnail: "../images/detail-notification-image-1.png",
-            summary: "BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.",
+            thumbnail: "../images/search-thumbnail-4.jfif",
+            summary: "Vị trí Fresher tại KMS với full quyền lợi của một nhân viên chính thức ngay từ ngày đầu tiên, cơ hội dành cho các bạn sinh viên IT năm 3-4 và mới tốt nghiệp, làm việc tại Tp. Hồ Chí Minh hoặc Đà Nẵng.",
             link: "../detailNotiStudentPage/index.html",
             view: 2425
         },
         {
-            title: "Đăng ký ứng tuyển học bổng công ty TNHH ScrumViet",
+            title: "Đăng ký học bổng POSCO TJ Park Foundation năm 2021",
             date: "10/01/2021",
-            thumbnail: "../images/detail-notification-image-2.png",
-            summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
+            thumbnail: "../images/search-thumbnail-3.jfif",
+            summary: "Đối tượng dự tuyển Sinh viên đại học hệ chính quy khóa 2017 hoặc 2018, có tư cách đạo đức tốt; Sinh viên có điểm trung bình học kì 2 năm học 2018-2019 và học kì 1 năm học 2019-2020 từ 8.5 trở lên, không có môn học thi lại; Điểm rèn luyện học kì 1 năm học 2019-2020 từ 80 điểm trở lên;",
             link: "../detailNotiTeacherPage/index.html",
             view: 2324
         },
         {
-            title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
+            title: "[FUJINET] Đăng ký Fresher Web Developers",
             date: "07/01/2021",
-            summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
+            summary: "Fujinet - là công ty phát triển phần mềm cho thị trường Nhật Bản hàng đầu tại Việt Nam, với gần hơn 800 kỹ sư đang làm việc tại Việt Nam và hơn 50 kỹ sư onsite tại Fujinet Japan Nhật Bản.",
             link: "../detailNotiStudentPage/index.html",
             view: 2626
         },
         {
-            title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
+            title: "[VNG] Đăng ký ứng tuyển chương trình VNG Tech Fresher 2021",
             date: "07/01/2021",
-            summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
+            summary: "VNG Tech Fresher đang tìm kiếm ứng viên là: - Sinh viên khá giỏi ngành CNTT tại TP.HCM, tốt nghiệp năm 2021 & 2022- Nắm vững kiến thức về cấu trúc dữ liệu, thuật toán và ngôn ngữ lập trình- Có tư duy logic, thái độ cầu tiến ",
             link: "../detailNotiStudentPage/index.html",
             view: 2525
         },
         {
-            title: "Thông báo nộp đơn đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)",
+            title: "Công ty Goldeneye Technologies mở đăng ký tuyển dụng Back-end/ Front-end Internship",
             date: "08/01/2021",
-            thumbnail: "../images/detail-notification-image-1.png",
-            summary: "BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.",
+            thumbnail: "../images/search-thumbnail-1.jfif",
+            summary: "Vị trí Back-end Internship và Front-end Internship tại Goldeneye Technologies đang được mở dành cho các bạn sinh viên năm 3, năm cuối hoặc vừa mới tốt nghiệp các chuyên ngành công nghệ thông tin, làm việc tại Thành phố Hồ Chí Minh.",
             link: "../detailNotiStudentPage/index.html",
             view: 1212
         },
