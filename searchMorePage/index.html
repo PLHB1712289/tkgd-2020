@@ -187,7 +187,7 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item active px-4">
+            <li class="nav-item active px-4 d-none">
               <form class="form-inline" id="searchForm">
                 <input id="key-search" class="form-control" type="search" placeholder="Tìm kiếm" aria-label="Search" value="Đăng ký">
                 <a id="searchSubmitBtn" class="nav-link" href="#"><i class="fas fa-search search-icon text-white"></i></a>
@@ -268,6 +268,10 @@
               <hr/>
             </div>
             <div class="registerPro-left-body px-5">
+              <div id="filterErrorMsg" class="filter-error-msg">
+                <h3>Không tìm thấy kết quả nào thuộc khoảng thời gian lựa chọn</h3>
+                <img src="../images/not-found-icon.svg" width="220" height="220"/>
+              </div>
               <ul id="searchResultList" class="px-0">
                 
               </ul>
@@ -281,14 +285,14 @@
         <nav aria-label="Page navigation example" class="pagination-nav">
           <div class="pagination p1">
             <ul id="searchMorePagination">
-              <a href="#"><li><<</li></a>
+              <!--<a href="#"><li><<</li></a>
               <a class="is-active" href="#"><li>1</li></a>
               <a href="#"><li>2</li></a>
               <a href="#"><li>3</li></a>
               <a href="#"><li>4</li></a>
               <a href="#"><li>5</li></a>
               <a href="#"><li>6</li></a>
-              <a href="#"><li>>></li></a>
+              <a href="#"><li>>></li></a>-->
             </ul>
           </div>
         </nav>
