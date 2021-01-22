@@ -526,7 +526,7 @@
           if(x==""||x==null)
           {
             
-            document.getElementById("errorName").innerHTML="Họ tên không thể rỗng";
+            document.getElementById("errorName").innerHTML="Vui lòng nhập Họ Tên";
 			document.getElementById("row-name-mssv").style.marginBottom = '0px';
           }
           else
@@ -543,7 +543,7 @@
           var x=document.getElementById("mssv").value;
           if(x==""||x==null)
           {
-            document.getElementById("errorMssv").innerHTML="MSSV không thể rỗng";
+            document.getElementById("errorMssv").innerHTML="Vui lòng nhập MSSV";
 			document.getElementById("row-name-mssv").style.marginBottom = '0px';
           }
           else
@@ -641,6 +641,14 @@
             }
           }
         }
+		const onCheckValue = function() {
+		onNameChange();
+		onMSSVChange();
+		onCVfileSelect();
+		onScoreSelect();
+		onFirstChange();
+		onSecChange();
+		}
       $(document).ready(function(){
         $('#registerProForm').focusout(function(){
           var x=document.getElementById("errorRegisterForm").value;
@@ -651,18 +659,18 @@
           }
           
         });
-        $('#name').focusout(onNameChange);
-		$('#name').change(onNameChange);
-        $('#mssv').focusout(onMSSVChange);
-		$('#mssv').change(onMSSVChange);
-        $('#cvFile').focusout(onCVfileSelect);
-		$('#cvFile').change(onCVfileSelect);
-        $('#scoreSheetFile').focusout(onScoreSelect);
-		$('#scoreSheetFile').change(onScoreSelect);
-        $('#firstChoiceBtn').focusout(onFirstChange);
-		$('#firstChoiceBtn').change(onFirstChange);
-		$('#secondChoiceBtn').focusout(onSecChange);
-        $('#secondChoiceBtn').change(onSecChange);
+        $('#name').focusout(onCheckValue);
+		$('#name').change(onCheckValue);
+        $('#mssv').focusout(onCheckValue);
+		$('#mssv').change(onCheckValue);
+        $('#cvFile').focusout(onCheckValue);
+		$('#cvFile').change(onCheckValue);
+        $('#scoreSheetFile').focusout(onCheckValue);
+		$('#scoreSheetFile').change(onCheckValue);
+        $('#firstChoiceBtn').focusout(onCheckValue);
+		$('#firstChoiceBtn').change(onCheckValue);
+		$('#secondChoiceBtn').focusout(onCheckValue);
+        $('#secondChoiceBtn').change(onCheckValue);
       });
     </script>
     <script src="../javascript/projectGlobalVariable.js"></script>
