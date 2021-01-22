@@ -59,7 +59,7 @@
                 <div class="dropdown-divider w-100"></div>
                 <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng vàng thành tích</a>
                 <div class="dropdown-divider w-100"></div>
-                <a class="dropdown-item pl-0 pr-5" href="../registerproject/index.html"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
+                <a class="dropdown-item pl-0 pr-5" onclick="return onClickDKDT();"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
                 <div class="dropdown-divider w-100"></div>
               </div>
             </div>
@@ -219,7 +219,7 @@
     <div id="searchResultSection" class="container moreSearchResultWrapper my-5" style="padding: 0;">
       <div class="row mt-4 mb-3">
         <!-- Search bar -->
-        <div class="col-md-6">
+        <div class="col-md-10">
           <div class="searchPage-bar pl-5 pr-1">
             <div class="input-group md-form form-sm form-2 pl-0">
               <input id="moreResultSearchInp" class="form-control my-0 py-1 red-border" type="text" placeholder="Tìm kiếm" aria-label="Search" value="Đăng ký">
@@ -230,34 +230,10 @@
             </div>
           </div>
          </div>
-         <!-- Sort Option -->
-         <div class="col-md-3 pr-0">
-            <div class="btn-group row w-100">
-              <a type="button" class="btn col-md-4 text-right">Sắp xếp</a>
-              <div class="col-md-8">
-                <button
-                  type="button"
-                  class="btn dropdown-toggle dropdown-toggle-split"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  id="sortDropdownMenu"
-                >
-                  <span class="visually-hidden">Ngày gần đây</span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="sortDropdownMenu">
-                  <li id="sortByDateDesc"><a class="dropdown-item" href="#">Ngày gần đây</a></li>
-                  <li id="sortByDateAsc"><a class="dropdown-item" href="#">Ngày xa nhất</a></li>
-                  <li id="sortByPopularity"><a class="dropdown-item" href="#">Độ phổ biến</a></li>
-                </ul>
-              </div>
-            </div>
-         </div>
-         <!-- /Sort Option -->
       </div>
       <div class="row mt-4 mb-3">
         <!-- Filter Option -->
-        <div class="offset-md-6 col-md-3 mr-0 pr-0">
+        <div class="col-md-3 mr-0 pr-0">
           <div class="btn-group row w-100">
             <a type="button" class="btn col-md-4 text-right">Từ</a>
             <div class="col-md-8 pr-0">
@@ -273,6 +249,30 @@
             </div>
           </div>
         </div>
+        <!-- Sort Option -->
+        <div class="col-md-3 pr-0">
+          <div class="btn-group row w-100">
+            <a type="button" class="btn col-md-4 text-right">Sắp xếp</a>
+            <div class="col-md-8">
+              <button
+                type="button"
+                class="btn dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                id="sortDropdownMenu"
+              >
+                <span class="visually-hidden">Ngày gần đây</span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="sortDropdownMenu">
+                <li id="sortByDateDesc"><a class="dropdown-item" href="#">Ngày gần đây</a></li>
+                <li id="sortByDateAsc"><a class="dropdown-item" href="#">Ngày xa nhất</a></li>
+                <li id="sortByPopularity"><a class="dropdown-item" href="#">Độ phổ biến</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /Sort Option -->
       </div>
       <div class="row">
         <div class="col-md-12 registerPro-left">
@@ -363,7 +363,20 @@
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../javascript/search.js"></script>
-
+	<script>
+		const onClickDKDT = function(){
+			const nv1 = localStorage.getItem("nguyenvong1");
+			const nv2 = localStorage.getItem("nguyenvong2");
+			const user = localStorage.getItem("user");
+			if (user != 1) { 
+				return;
+			}
+			if (nv1 == null || nv1 == "" || nv2 == null || nv2 == "")
+				window.location.href = "../registerproject/index.html";
+			else
+				window.location.href = "../cancelRegisterProject/index.html";
+		}
+	</script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
