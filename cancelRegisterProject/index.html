@@ -71,7 +71,7 @@
               <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng
                 vàng thành tích</a>
               <div class="dropdown-divider w-100"></div>
-              <a class="dropdown-item pl-0 pr-5" href="../cancelRegisterProject/index.html"><i
+              <a class="dropdown-item pl-0 pr-5" onclick="return onClickDKDT();"><i
                   class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
               <div class="dropdown-divider w-100"></div>
             </div>
@@ -439,6 +439,20 @@
     }
     document.getElementsByTagName("body").addEventListener("load", onLoadData());
   </script>
+  	<script>
+		const onClickDKDT = function(){
+			const nv1 = localStorage.getItem("nguyenvong1");
+			const nv2 = localStorage.getItem("nguyenvong2");
+			const user = localStorage.getItem("user");
+			if (user != 1) { 
+				return;
+			}
+			if (nv1 == null || nv1 == "" || nv2 == null || nv2 == "")
+				window.location.href = "../registerproject/index.html";
+			else
+				window.location.href = "../cancelRegisterProject/index.html";
+		}
+	</script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="../javascript/search.js"></script>
 
