@@ -33,52 +33,6 @@ $(document).ready(function () {
         },
         {
             title: "Thông báo nộp đơn đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)",
-            date: "07/12/2020",
-            thumbnail: "../images/detail-notification-image-1.png",
-            summary: "BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.",
-            link: "../detailNotiStudentPage/index.html",
-            view: 83636
-        },
-        {
-            title: "Đăng ký ứng tuyển học bổng công ty TNHH ScrumViet",
-            date: "03/12/2020",
-            thumbnail: "../images/detail-notification-image-2.png",
-            summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
-            link: "../detailNotiTeacherPage/index.html",
-            view: 12563
-        },
-        {
-            title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
-            date: "03/01/2021",
-            summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
-            link: "../detailNotiStudentPage/index.html",
-            view: 9672
-        },
-        {
-            title: "Thông báo nộp đơn đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)",
-            date: "01/01/2021",
-            thumbnail: "../images/detail-notification-image-1.png",
-            summary: "BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.",
-            link: "../detailNotiStudentPage/index.html",
-            view: 2626
-        },
-        {
-            title: "Đăng ký ứng tuyển học bổng công ty TNHH ScrumViet",
-            date: "15/01/2021",
-            thumbnail: "../images/detail-notification-image-2.png",
-            summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
-            link: "../detailNotiTeacherPage/index.html",
-            view: 6361
-        }    ,
-        {
-            title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
-            date: "05/01/2021",
-            summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
-            link: "../detailNotiStudentPage/index.html",
-            view: 2871
-        },
-        {
-            title: "Thông báo nộp đơn đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)",
             date: "03/01/2021",
             thumbnail: "../images/detail-notification-image-1.png",
             summary: "BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.",
@@ -101,44 +55,13 @@ $(document).ready(function () {
             view: 26176
         },
         {
-            title: "Thông báo nộp đơn đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)",
-            date: "31/12/2020",
-            thumbnail: "../images/detail-notification-image-1.png",
-            summary: "BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.",
-            link: "../detailNotiStudentPage/index.html",
-            view: 2412
-        },
-        {
-            title: "Đăng ký ứng tuyển học bổng công ty TNHH ScrumViet",
-            date: "03/01/2021",
-            thumbnail: "../images/detail-notification-image-2.png",
-            summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
-            link: "../detailNotiTeacherPage/index.html",
-            view: 32515
-        },
-        {
-            title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
-            date: "04/01/2021",
-            summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
-            link: "../detailNotiStudentPage/index.html",
-            view: 6453
-        },
-        {
-            title: "Thông báo nộp đơn đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)",
-            date: "06/01/2021",
-            thumbnail: "../images/detail-notification-image-1.png",
-            summary: "BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp trong đợt đăng ký Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 ... Chương trình chính quy.",
-            link: "../detailNotiStudentPage/index.html",
-            view: 2143
-        },
-        {
             title: "Đăng ký ứng tuyển học bổng công ty TNHH ScrumViet",
             date: "11/01/2021",
             thumbnail: "../images/detail-notification-image-2.png",
             summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
             link: "../detailNotiTeacherPage/index.html",
             view: 3625
-        }    ,
+        },
         {
             title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
             date: "06/01/2021",
@@ -161,6 +84,13 @@ $(document).ready(function () {
             summary: "Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.",
             link: "../detailNotiTeacherPage/index.html",
             view: 2324
+        },
+        {
+            title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
+            date: "07/01/2021",
+            summary: "Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng HK1 2020-2021. Sinh viên chú ý theo dõi và đăng ký theo đúng lịch trường đã sắp xếp...",
+            link: "../detailNotiStudentPage/index.html",
+            view: 2626
         },
         {
             title: "Thông báo đăng ký học phần cho sinh viên bậc Cao đẳng HK1 2020-2021",
