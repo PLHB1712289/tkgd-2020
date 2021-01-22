@@ -659,18 +659,18 @@
           }
           
         });
-        $('#name').focusout(onCheckValue);
-		$('#name').change(onCheckValue);
-        $('#mssv').focusout(onCheckValue);
-		$('#mssv').change(onCheckValue);
-        $('#cvFile').focusout(onCheckValue);
-		$('#cvFile').change(onCheckValue);
-        $('#scoreSheetFile').focusout(onCheckValue);
-		$('#scoreSheetFile').change(onCheckValue);
-        $('#firstChoiceBtn').focusout(onCheckValue);
-		$('#firstChoiceBtn').change(onCheckValue);
-		$('#secondChoiceBtn').focusout(onCheckValue);
-        $('#secondChoiceBtn').change(onCheckValue);
+        $('#name').focusout(onNameChange);
+		$('#name').change(onNameChange);
+        $('#mssv').focusout(onMSSVChange);
+		$('#mssv').change(onMSSVChange);
+        $('#cvFile').focusout(onCVfileSelect);
+		$('#cvFile').change(onCVfileSelect);
+        $('#scoreSheetFile').focusout(onScoreSelect);
+		$('#scoreSheetFile').change(onScoreSelect);
+        $('#firstChoiceBtn').focusout(onFirstChange);
+		$('#firstChoiceBtn').change(onFirstChange);
+		$('#secondChoiceBtn').focusout(onSecChange);
+        $('#secondChoiceBtn').change(onSecChange);
       });
     </script>
     <script src="../javascript/projectGlobalVariable.js"></script>
@@ -704,6 +704,7 @@
         $('#choiceModal').modal('hide');
       }
       const onRegister = () => {
+		onCheckValue();
         let name = document.getElementById("name").value;
         let mssv = document.getElementById("mssv").value;
         let cvFile = document.getElementById("cvFile").value;
