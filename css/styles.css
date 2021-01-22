@@ -601,6 +601,10 @@ img {
   margin: 0;
 }
 
+.sub-menu .dropdown-menu .dropdown-item{
+  cursor: pointer;
+}
+
 .map-frame {
   box-shadow: 5px 10px 18px #1223;
   width: 80%;
