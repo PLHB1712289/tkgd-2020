@@ -58,7 +58,7 @@
                 <div class="dropdown-divider w-100"></div>
                 <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng vàng thành tích</a>
                 <div class="dropdown-divider w-100"></div>
-                <a class="dropdown-item pl-0 pr-5" href="../registerproject/index.html"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
+                <a class="dropdown-item pl-0 pr-5" onclick="return onClickDKDT();"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
                 <div class="dropdown-divider w-100"></div>
               </div>
             </div>
@@ -78,8 +78,24 @@
               </div>
             </div>
           </li>
-          <li class="nav-item active sub-menu">
-            <a class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+          <li id="logInCompo" class="nav-item active sub-menu">
+            <a id="logInBtn" class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+          </li>
+          <li id="settingCompo" class="nav-item active sub-menu">
+            <a class="nav-link" href="#" role="button" id="settingDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span id="signedInUser">1712289</span>&nbsp;
+              <span class="signedInIcons">
+                <i class="fas fa-user"></i>&nbsp;
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </span>
+            </a>
+            <div class="dropdown px-1">
+              <div class="dropdown-menu px-0" aria-labelledby="settingDropdownMenu">
+                <a class="dropdown-item pl-0 pr-3" href="#"><i class="far fa-address-card px-3"></i> Hồ sơ</a>
+                <div class="dropdown-divider w-100"></div>
+                <a id="logOutBtn" class="dropdown-item pl-0 pr-3" href="#"><i class="fas fa-sign-out-alt px-3"></i> Đăng xuất</a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -755,6 +771,20 @@ SAU KHI RA TRƯỜNG</pre>
     <script>
       localStorage.setItem("homepage-github", false);
     </script>
+	<script>
+		const onClickDKDT = function(){
+			const nv1 = localStorage.getItem("nguyenvong1");
+			const nv2 = localStorage.getItem("nguyenvong2");
+			const user = localStorage.getItem("user");
+			if (user != 1) { 
+				return;
+			}
+			if (nv1 == null || nv1 == "" || nv2 == null || nv2 == "")
+				window.location.href = "../registerproject/index.html";
+			else
+				window.location.href = "../cancelRegisterProject/index.html";
+		}
+	</script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -772,5 +802,7 @@ SAU KHI RA TRƯỜNG</pre>
     ></script>
     <!-- Fontawesome-->
     <script src="https://kit.fontawesome.com/4e30919dc1.js" crossorigin="anonymous"></script>
+
+    <script src="../javascript/authentication.js"></script>
   </body>
 </html>
